@@ -1,0 +1,960 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=Generator content="Microsoft Word 11 (filtered)">
+<title>Player Contracts: The Short Version</title>
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Verdana;
+	panose-1:2 11 6 4 3 5 4 4 2 4;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0in;
+	margin-bottom:.0001pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+a:link, span.MsoHyperlink
+	{color:blue;
+	text-decoration:underline;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:navy;
+	text-decoration:underline;}
+@page Section1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.25in 1.0in 1.25in;}
+div.Section1
+	{page:Section1;}
+ /* List Definitions */
+ ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+-->
+</style>
+
+</head>
+
+<body lang=EN-US link=blue vlink=navy style='text-justify-trim:punctuation'>
+
+<div class=Section1>
+
+<p class=MsoNormal><b><span style='font-family:Verdana'>Player Contracts: The
+Short Version</span></b></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'><a
+href="http://forums.station.sony.com/swg/board/message?board.id=csystems&amp;message.id=15183">http://forums.station.sony.com/swg/board/message?board.id=csystems&amp;message.id=15183</a></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>2004/03/23</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>I'd like
+to see a more powerful version of Secure Trades. Players should be able to
+create contracts with other players to perform different kinds of tasks.</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>Not only
+would this be fun in itself, it would open the door to player missions, since
+enforceable contracts would allow players to trust each other in financial
+deals.</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>The full
+design document for this idea can be found starting in message #4421 in this
+forum, and that thread contains many additions, enhancements, and responses to
+objections. This thread offers a condensed version for additional comment.</span></p>
+
+<p class=MsoNormal><b><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></b></p>
+
+<p class=MsoNormal><b><span style='font-size:10.0pt;font-family:Verdana'>0.
+OVERVIEW</span></b></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>A Player
+Contract is an agreement between two players whose terms are enforced by the
+game to trade items of value. Player A (the &quot;contracting player&quot;)
+agrees to provide goods or money to Player B in exchange for Player B (the
+&quot;contracted player&quot;) agreeing to provide goods, money, or a specific
+service to Player A. Player A makes the contract offer, and Player B accepts
+the offer.</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>A Player
+Contract system will allow Player A to write a contract document that specifies
+a number of options:</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<ul style='margin-top:0in' type=disc>
+ <li class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>the
+     contract type</span></li>
+ <li class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>what
+     things are to be exchanged</span></li>
+ <li class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>when
+     exchanges can occur</span></li>
+ <li class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>how the
+     contract may be successfully terminated</span></li>
+ <li class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>optional
+     penalties for breaking a contract</span></li>
+</ul>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>The game
+system itself has to be able to do two things:</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<ul style='margin-top:0in' type=disc>
+ <li class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>recognize
+     when the terms of a contract are met or broken</span></li>
+ <li class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>automatically
+     apply contract terms based on contract status</span></li>
+</ul>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>The
+important thing to recognize about this is that we won't need player lawyers or
+CSRs to adjudicate contract disputes because the game itself, acting as a
+completely impartial judge, will handle all contract resolutions automatically.</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>What
+follows are the details that describe how to achieve these goals.</span></p>
+
+<p class=MsoNormal><b><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></b></p>
+
+<p class=MsoNormal><b><span style='font-size:10.0pt;font-family:Verdana'>1.
+CONTRACT TYPES</span></b></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>A good contract
+system goes well beyond merely trading goods. It enables a service economy to
+flourish because it allows players to perform useful tasks for each other. Not
+only does this help spread money around, it's just fun.</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>Examples
+of possible contract types are:</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0
+ style='border-collapse:collapse'>
+ <tr>
+  <td width=83 valign=top style='width:62.6pt;border-top:solid windowtext 1.0pt;
+  border-left:solid windowtext 1.0pt;border-bottom:none;border-right:none;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><b><span style='font-size:10.0pt;font-family:Verdana'>Exchange</span></b></p>
+  </td>
+  <td width=468 valign=top style='width:351.0pt;border-top:solid windowtext 1.0pt;
+  border-left:none;border-bottom:none;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>swap
+  goods for goods or goods for money</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=83 valign=top style='width:62.6pt;border:none;border-left:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><b><span style='font-size:10.0pt;font-family:Verdana'>Tribute</span></b></p>
+  </td>
+  <td width=468 valign=top style='width:351.0pt;border:none;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>give
+  another player goods or money for an unspecified reason</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=83 valign=top style='width:62.6pt;border:none;border-left:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><b><span style='font-size:10.0pt;font-family:Verdana'>Transport</span></b></p>
+  </td>
+  <td width=468 valign=top style='width:351.0pt;border:none;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>move
+  items [or player characters] to a specified location</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=83 valign=top style='width:62.6pt;border:none;border-left:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><b><span style='font-size:10.0pt;font-family:Verdana'>Delivery</span></b></p>
+  </td>
+  <td width=468 valign=top style='width:351.0pt;border:none;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>give
+  items to a specified player character</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=83 valign=top style='width:62.6pt;border:none;border-left:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><b><span style='font-size:10.0pt;font-family:Verdana'>Recon</span></b></p>
+  </td>
+  <td width=468 valign=top style='width:351.0pt;border:none;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>go to a
+  particular location</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=83 valign=top style='width:62.6pt;border:none;border-left:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><b><span style='font-size:10.0pt;font-family:Verdana'>Obtain</span></b></p>
+  </td>
+  <td width=468 valign=top style='width:351.0pt;border:none;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>take
+  possession of a specified item</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=83 valign=top style='width:62.6pt;border:none;border-left:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><b><span style='font-size:10.0pt;font-family:Verdana'>Entertain</span></b></p>
+  </td>
+  <td width=468 valign=top style='width:351.0pt;border:none;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>dance
+  or play music for a specified player character</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=83 valign=top style='width:62.6pt;border:none;border-left:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><b><span style='font-size:10.0pt;font-family:Verdana'>Heal</span></b></p>
+  </td>
+  <td width=468 valign=top style='width:351.0pt;border:none;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>heal
+  wounds or cure diseases of a specified living target</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=83 valign=top style='width:62.6pt;border:none;border-left:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><b><span style='font-size:10.0pt;font-family:Verdana'>Buff</span></b></p>
+  </td>
+  <td width=468 valign=top style='width:351.0pt;border:none;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>improve
+  the stats of a specified player character</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=83 valign=top style='width:62.6pt;border:none;border-left:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><b><span style='font-size:10.0pt;font-family:Verdana'>Craft</span></b></p>
+  </td>
+  <td width=468 valign=top style='width:351.0pt;border:none;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>create
+  a particular kind of object, possibly with certain stats</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=83 valign=top style='width:62.6pt;border:none;border-left:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><b><span style='font-size:10.0pt;font-family:Verdana'>Slice</span></b></p>
+  </td>
+  <td width=468 valign=top style='width:351.0pt;border:none;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>slice
+  an object</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=83 valign=top style='width:62.6pt;border:none;border-left:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><b><span style='font-size:10.0pt;font-family:Verdana'>Destroy</span></b></p>
+  </td>
+  <td width=468 valign=top style='width:351.0pt;border:none;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>eliminate
+  a specific lair or mob, or destroy a unique item</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=83 valign=top style='width:62.6pt;border:none;border-left:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><b><span style='font-size:10.0pt;font-family:Verdana'>Guard</span></b></p>
+  </td>
+  <td width=468 valign=top style='width:351.0pt;border:none;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>defend
+  a specified player character</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=83 valign=top style='width:62.6pt;border:none;border-left:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><b><span style='font-size:10.0pt;font-family:Verdana'>Bounty</span></b></p>
+  </td>
+  <td width=468 valign=top style='width:351.0pt;border:none;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>kill a
+  specified player character [who must agree to be a target]</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=83 valign=top style='width:62.6pt;border-top:none;border-left:solid windowtext 1.0pt;
+  border-bottom:solid windowtext 1.0pt;border-right:none;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><b><span style='font-size:10.0pt;font-family:Verdana'>Marriage</span></b></p>
+  </td>
+  <td width=468 valign=top style='width:351.0pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>marry
+  another player character [note that this allows divorce, too]</span></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>These are
+just contract types that I've thought of -- I'm sure there are more.</span></p>
+
+<p class=MsoNormal><b><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></b></p>
+
+<p class=MsoNormal><b><span style='font-size:10.0pt;font-family:Verdana'>2.
+CONTRACT PERIODS</span></b></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>Contracts
+become truly useful when they're not restricted to being one-shot, immediate
+deals. Players should be able to specify the periods in which a contract is to
+be active according to lifespan and frequency. Lifespan options are:</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<ul style='margin-top:0in' type=disc>
+ <li class=MsoNormal><i><span style='font-size:10.0pt;font-family:Verdana'>immediate</span></i><span
+     style='font-size:10.0pt;font-family:Verdana'> (trade happens as soon as
+     both parties agree) </span></li>
+ <li class=MsoNormal><i><span style='font-size:10.0pt;font-family:Verdana'>limited</span></i><span
+     style='font-size:10.0pt;font-family:Verdana'> (trade happens at a specific
+     future time) </span></li>
+ <li class=MsoNormal><i><span style='font-size:10.0pt;font-family:Verdana'>indefinite</span></i><span
+     style='font-size:10.0pt;font-family:Verdana'> (trade may happen at an
+     unknown future time)</span></li>
+</ul>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>and frequency
+options are:</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<ul style='margin-top:0in' type=disc>
+ <li class=MsoNormal><i><span style='font-size:10.0pt;font-family:Verdana'>one-time</span></i><span
+     style='font-size:10.0pt;font-family:Verdana'> (trade happens once, then
+     the contract ends) </span></li>
+ <li class=MsoNormal><i><span style='font-size:10.0pt;font-family:Verdana'>recurring</span></i><span
+     style='font-size:10.0pt;font-family:Verdana'> (trades can happen
+     repeatedly until the contract ends)</span></li>
+</ul>
+
+<p class=MsoNormal><b><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></b></p>
+
+<p class=MsoNormal><b><span style='font-size:10.0pt;font-family:Verdana'>3.
+PLAYER-SPECIFIED CONTRACT TERMINATION</span></b></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>Contracts
+should have two mutually exclusive termination options:</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<ul style='margin-top:0in' type=disc>
+ <li class=MsoNormal><i><span style='font-size:10.0pt;font-family:Verdana'>unilateral</span></i><span
+     style='font-size:10.0pt;font-family:Verdana'> (either player can cancel
+     the contract without penalty </span></li>
+ <li class=MsoNormal><i><span style='font-size:10.0pt;font-family:Verdana'>bilateral</span></i><span
+     style='font-size:10.0pt;font-family:Verdana'> (both players must agree to
+     cancel to avoid imposing a penalty)</span></li>
+</ul>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>Players
+won't use a contract system if the other player can just cancel deals, so the
+bilateral option has to exist to allow for penalties (see next section) against
+simply breaking an agreed-on contract. But we don't want to force players who
+trust each other to have to make every contract bilateral (and
+indefinite-duration contracts should not be bilateral), so there also needs to
+be an option to allow a contract to be unilateral.</span></p>
+
+<p class=MsoNormal><b><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></b></p>
+
+<p class=MsoNormal><b><span style='font-size:10.0pt;font-family:Verdana'>4.
+VARIETY OF PENALTIES</span></b></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>There are
+two types of penalties that could be applied if one player breaks the terms of
+a contract:</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<ul style='margin-top:0in' type=disc>
+ <li class=MsoNormal><i><span style='font-size:10.0pt;font-family:Verdana'>monetary</span></i><span
+     style='font-size:10.0pt;font-family:Verdana'> (a cash payment to the other
+     player)</span></li>
+ <li class=MsoNormal><i><span style='font-size:10.0pt;font-family:Verdana'>bounty</span></i><span
+     style='font-size:10.0pt;font-family:Verdana'> (a &quot;deathmark&quot;
+     collectable by the first BH who DBs the target)</span></li>
+</ul>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>For a
+monetary penalty, both players agree on an amount of money to be paid to
+whoever doesn't break the contract and each puts up half that amount when they
+accept the contract. If Player A breaks the contract, all the penalty money is
+immediately transferred into Player B's bank account, and vice versa.</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>A bounty
+works the same way, except that the penalty money is used to pay a bounty
+hunter to go after whoever broke the contract.</span></p>
+
+<p class=MsoNormal><b><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></b></p>
+
+<p class=MsoNormal><b><span style='font-size:10.0pt;font-family:Verdana'>5. CONTRACT
+CREATION</span></b></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>The key
+to understanding how Player Contracts work is recognizing that there are three
+&quot;accounts&quot; in a contract. Each account is a container that can hold
+money or goods.</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<ul style='margin-top:0in' type=disc>
+ <li class=MsoNormal><i><span style='font-size:10.0pt;font-family:Verdana'>Payoff
+     Account</span></i><span style='font-size:10.0pt;font-family:Verdana'> (what
+     Player B gets when the contract is activated)</span></li>
+ <li class=MsoNormal><i><span style='font-size:10.0pt;font-family:Verdana'>Provision
+     Account</span></i><span style='font-size:10.0pt;font-family:Verdana'>
+     (what Player A gets when the contract is activated)</span></li>
+ <li class=MsoNormal><i><span style='font-size:10.0pt;font-family:Verdana'>Penalty
+     Account</span></i><span style='font-size:10.0pt;font-family:Verdana'>
+     (what one player gets if the other player breaks the contract)</span></li>
+</ul>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>The first
+thing Player A does when he creates a contract is to choose the contract type
+from the available options. Depending on the contract type, this may set some
+other fields, and will at a minimum determine the specific fields Player A
+needs to fill in for the rest of the contract.</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>Player
+A's next task is to enter the desired values into the three contract accounts.
+He is required to put the actual payoff into the Payoff Account -- if goods,
+they're taken from his bank vault (or personal inventory in some cases); if
+money, it's taken from his bank account. Either way the actual items are taken
+from him and placed into the contract's Payoff Account container. This insures
+that the contract is for real. (It also specifies what will be taken from his
+bank account every additional time the contract is activated if it's not just a
+one-time deal.)</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>Player A
+then specifies in the Provision Account what he wants to receive. It could be a
+certain type and number of goods; it could be money (assuming he's not offering
+money as a payoff -- simply swapping money for money would be pointless); or it
+could be a particular kind of service. If it's a service, then Player A will
+just fill in the details (if any), since the specific type of service will be
+set when Player A chooses the contract type.</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>Next,
+Player A will specify whether the contract is to be unilateral or multilateral
+-- in other words, whether it will be OK for either player to break the
+contract, or whether both players have to agree to terminate the contract in
+order to avoid getting stuck with a penalty. Allowing this choice enables
+players to either have a penalty (if they want insurance that the other player
+will honor the contract) or not (if they fully trust the other player, say, if
+they're both members of the same PA).</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>Finally,
+the penalty type is set -- either as a cash payout, or as a bounty. In either
+case Player A moves half of the specified amount from his bank account into the
+Penalty Account.</span></p>
+
+<p class=MsoNormal><b><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></b></p>
+
+<p class=MsoNormal><b><span style='font-size:10.0pt;font-family:Verdana'>6.
+CONTRACT NEGOTIATION</span></b></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>At this
+point the initial contract (which I call a &quot;draft contract&quot;) has been
+created. Now it's time to negotiate the details with Player B.</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>After
+Player A creates a contract he has two choices. The first is to put the
+contract up on a Contract Terminal (creating an &quot;Open Contract&quot;).
+Once it's on a terminal the terms can't be altered by anyone; if a wandering
+Player B reads the terms and likes them, he can accept the contract and it goes
+into force immediately, or else he can simply choose not to take that contract.</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>Player
+A's other option is to offer a contract directly to a player character I call
+this a &quot;Personal Contract.&quot; It's just like the Open Contract except
+that it's directly offered to one person (another player character), and the
+terms can be negotiated in real time by both players.</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>Player A offers
+the contract to Player B just like a trade request. Player B looks at the terms
+and changes whatever he wants, then Player A can change the terms, then Player
+B can change them again, and so on. This negotiation process can continue
+indefinitely; it ends when one of two things happens:</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<ul style='margin-top:0in' type=disc>
+ <li class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>either
+     player cancels the negotiation (ending the contract offer)</span></li>
+ <li class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>both
+     players accept the contract as negotiated</span></li>
+</ul>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>Like the
+Secure Trade, once either player clicks on the &quot;Accept&quot; button no
+further negotiation is permitted; at that point all the other player can do is
+cancel or accept.</span></p>
+
+<p class=MsoNormal><b><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></b></p>
+
+<p class=MsoNormal><b><span style='font-size:10.0pt;font-family:Verdana'>7.
+CONTRACT RESOLUTION</span></b></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>Once both
+players have accepted a contract, it goes into effect, and both players get a
+contract document in their datapad.</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>If
+there's an immediate exchange specified, it happens immediately, and if the
+contract was a one-time deal, it ends. (Notice that this implies that a Secure
+Trade is just a particular type of Player Contract.)</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>If the
+deal is for later trade (either of goods or for a later provision of some
+service), then the game itself has to watch for this event to happen. As soon
+as Player B fulfills the contract's provisioning terms (either supplying money
+or goods into the Provision Account, or performing the required service), the
+contract is &quot;activated.&quot; This means that the items in the Provision
+account are transferred to Player A, and the items in the Payoff Account (if
+any) are transferred to Player B. In a recurring deal, after the first trade
+any goods are taken from the providing player's bank vault -- to keep the deal
+going, you just keep putting the required number of those goods into your bank
+vault. (Note: It might be better to require that goods to be transferred are
+actually moved into the Payoff or Provision Account box in the contract document,
+rather than being taken from a player's bank vault, but either approach should
+work.)</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>If this
+was a one-time deal, then the contract ends. If it's a recurring deal, then it
+can be activated again when Player B fulfills his side of the contract terms.</span></p>
+
+<p class=MsoNormal><b><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></b></p>
+
+<p class=MsoNormal><b><span style='font-size:10.0pt;font-family:Verdana'>8.
+CONTRACT TERMINATION</span></b></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>A
+contract can end in a number of ways, but all terminations are of two types:
+successful or unsuccessful. Successfully terminated contracts just end;
+unsuccessfully terminated contracts trigger the agreed-upon penalty (if any).</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>A
+contract terminates successfully when all the terms of the contract are met,
+including the terms for how the contract is to end. Assuming all goods and
+money transferred successfully, then if the contract was a one-time deal or if the
+timer expired on a limited or recurring deal, the contract ends successfully.
+Also, if the contract is a unilateral contract, then as soon as either player
+cancels the contract it ends successfully.</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>A
+contract terminates unsuccessfully when anything happens in the game that
+prevents it from being terminated successfully. The most common ways in which a
+contract terminates unsuccessfully are:</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>1. The
+service can no longer be provided. For example, if someone other than Player B
+destroys the object to be destroyed in a Destroy contract, then that contract
+is broken because there's no longer any way for Player B to successfully
+complete it.</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>2. The
+goods can't be transferred either from or to a player. If you don't have enough
+of the agreed-on goods in the Provision or Payoff accounts when a transfer is
+scheduled, or you don't have the agreed number of credits in the Payoff account
+or your bank account, then you've broken the contract. Similarly, if you don't
+have enough room in your bank vault to receive goods to be transferred to you,
+then you've broken the contract.</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>3. Either
+player cancels a bilateral contract. By definition a bilateral contract
+requires both players to agree to cancel it; if either player cancels a
+bilateral contract, then he's broken the terms of the deal. (Note that
+canceling a contract can happen either by clicking on the &quot;Cancel&quot;
+button on the contract document or by manually destroying the contract document
+in your datapad.)</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>Regardless
+of how a contract ends, once it ends the contract document is deleted from the
+datapads of both players. It's also important to note that any goods or money
+in the Payoff and Provision accounts return to their owners when a contract is
+terminated (so there's no way to cheat the system). Also, if a contract is
+terminated successfully, the money that each player put into the Penalty
+Account is returned (since the contract wasn't broken, no penalty is enforced).</span></p>
+
+<p class=MsoNormal><b><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></b></p>
+
+<div class=MsoNormal align=center style='text-align:center'>
+
+<hr size=2 width="100%" align=center>
+
+</div>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>2004/04/21</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>Thanks
+for the interesting points. I don't mind skeptics of the idea of in-game
+contracts; if these ideas can't be defended from reasonable questions then they
+don't deserve implementation.</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-left:.5in'><span style='font-size:10.0pt;
+font-family:Verdana'>BoberFett wrote:</span></p>
+
+<p class=MsoNormal style='margin-left:.5in'><span style='font-size:10.0pt;
+font-family:Verdana'>I like the idea, I've given the contract system some
+thought myself. The biggest hurdle to overcome is not the punishment system (in
+my eyes anyway) but how the system decides whether or not the terms have been
+met. I'll just use your ideas. </span></p>
+
+<p class=MsoNormal style='margin-left:.5in'><i><span style='font-size:10.0pt;
+font-family:Verdana'>&nbsp;</span></i></p>
+
+<p class=MsoNormal style='margin-left:1.0in;text-indent:-.25in'><span
+style='font-size:10.0pt;font-family:Symbol'>·</span><span style='font-size:
+7.0pt'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><i><span
+style='font-size:10.0pt;font-family:Verdana'>Exchange (swap goods for goods or
+goods for money)</span></i></p>
+
+<p class=MsoNormal style='margin-left:.5in'><span style='font-size:10.0pt;
+font-family:Verdana'>If I am contracted to make somebody a weapon, I can give
+them a weapon back with any stats I want. They hand me Krayt tissue and I give
+them back a 150 max damage scout, as far as the sytem is concerned I fulfilled
+my end of the bargain. The buyer on the other hand will want to report me to a
+CSR for arbitration.</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>One of
+the features I mentioned in my Big Proposal was that each contract type would
+have terms that were specific to it. It's these terms that will allow players
+to specify what will and what won't satisfy them, so the terms available for any
+contract type have to be ones that let players verify that they're really
+getting what they want.</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>In this
+Exchange example, the terms would have to allow the potential buyer to specify
+the values of the features of the item being requested. In the case of a
+weapon, I'd want to be able to specific minimum and maximum damage values,
+wound values, range values, encumbrance values -- basically any numeric feature
+of the item being requested.</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>When
+contracts allow sufficiently specific terms (as my proposal recommends),
+contract resolution can work because players will have the power to get what
+they really want.</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>Note that
+this is even more likely to work well for one-time, immediate Exchange
+contracts which, as I noted, are basically our current Secure Trade. In this
+kind of contract, you could actually /examine the object to see if it's what
+you really want. We can't do any better than this currently, so it's hard to
+see how doing it as a contract is any worse!</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-left:1.0in;text-indent:-.25in'><span
+style='font-size:10.0pt;font-family:Symbol'>·</span><span style='font-size:
+7.0pt'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><i><span
+style='font-size:10.0pt;font-family:Verdana'>Transport (move items [or player
+characters] to a specified location)</span></i></p>
+
+<p class=MsoNormal style='margin-left:.5in'><span style='font-size:10.0pt;
+font-family:Verdana'>How does the system decide when the trip is complete? If
+somebody wants me to fly them from Mos Eisley to Endor, what happens if I drop
+off a second passenger at Moenia on the way? Does it wait for me to continue on
+to Endor? Does it consider me in breach even if I do eventually get them to
+Endor?</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>The thing
+to realize here is that the functionality to accomplish Transport missions
+already exists: it's the code that &quot;knows&quot; when you've come within a
+certain distance of a specific waypoint.</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>The
+system would know the trip was complete when you landed at the designated
+spaceport and your passenger exited your ship. Since Transport contracts could
+be specified as simply as &quot;take me to X spaceport,&quot; or could include
+a &quot;by such-and-such time&quot; clause, as long as you get your passengers
+where they want to go -- as specified in the contract that each ones signs with
+you -- then there's no problem.</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>If you
+accept a contract to take someone somewhere by a specific time, and you don't
+make it in time, that's not a flaw in the system -- that's you having made a
+bad business decision.</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-left:1.0in;text-indent:-.25in'><span
+style='font-size:10.0pt;font-family:Symbol'>·</span><span style='font-size:
+7.0pt'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><i><span
+style='font-size:10.0pt;font-family:Verdana'>Heal (heal wounds or cure diseases
+of a specified living target)</span></i></p>
+
+<p class=MsoNormal style='margin-left:.5in'><span style='font-size:10.0pt;
+font-family:Verdana'>What if while in the middle of healing, the party who is being
+healed is attacked and killed. Is the other party who agreed to do the healing
+in breach?</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>1.
+Remember that it's not necessary to have a penalty for breach of contract. In
+that case, it wouldn't matter if either party died before the requested healing
+was completed.</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>2. Since
+a one-shot heal is pretty trivial, most healing contracts would probably be on
+a recurring basis -- either for a set number of heals, or for a set number of
+pool points healed, or for healing any number of points for a certain amount of
+time. (Curing diseases would work the same way.) In this case, either character
+dying wouldn't have anything to do with breaching the contract. Cancelling
+one's character would, however; in this case the character who was deleted
+would be the one considered in breach.</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>3. If
+despite all this either party died in the middle of a one-shot heal with
+penalty, then we have to look at why the contract couldn't be fulfilled. If the
+healer tries to fulfill his end but can't (because the recipient is dead), then
+that's not his fault -- the dead character should get penalized (in addition to
+dying, which seems harsh, but then he didn't have to ask for a penalty for
+breaking the contract). If on the other hand the healer has the capability to
+complete the agreed healing but doesn't, then in that case it would be the
+healer who has broken the contract and should be penalized.</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>The point
+in all this is to further emphasize how important it is for the contract system
+to be detailed enough that players can specify the terms they really want in
+any contract type. If that's done, and if the code that monitors game events
+works properly (a big &quot;if,&quot; I freely admit), then contracts could
+work.</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-left:1.0in;text-indent:-.25in'><span
+style='font-size:10.0pt;font-family:Symbol'>·</span><span style='font-size:
+7.0pt'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><i><span
+style='font-size:10.0pt;font-family:Verdana'>Obtain (take possession of a
+specified item)</span></i></p>
+
+<p class=MsoNormal style='margin-left:.5in'><span style='font-size:10.0pt;
+font-family:Verdana'>How do you determine which object is the one you want? By
+name? By serial number? Couldn't somebody pull a bait and switch?</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>1.
+Objects have semi-unique serial numbers. (Exact duplicates can have the same
+serial number.) This provides a secure way of identifying specific objects that
+the game system can use to ensure secure transfer of items.</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>2.
+Objects have properties. If you're offered an item, you have the ability to
+examine it, and the contract system has the ability to test numeric properties
+against contract terms. If the item offered is not equal to or better than what
+you specified you wanted, you don't have to accept it... and the contract
+system doesn't have to, either.</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-left:.5in'><span style='font-size:10.0pt;
+font-family:Verdana'>These are just off the top of my head. The systems
+required to handle the exceptions possible in all of these scenarios would end
+up dwarfing the combat system. It's taken them how long to get around to a
+combat balance? I wouldn't expect a contract system like you're discussing for
+a loooong time.</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>I don't
+pretend that any contract system would be perfect. Even if every property of an
+object was a specifiable term of a contract, there'd still be features that
+players would want added.</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>But I do
+think that a contract system that was designed so that most (if not all) object
+properties were available as player-specifiable contract terms would handle
+most of the cases in which exceptions could occur.</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>Trivial
+to design and code? No. This would be a significant effort -- not as much as
+for the Space Expansion, but several months of labor by two or three developers
+at least. And then it would have to be exhaustively playtested to squeeze out
+the bugs. But I also think the result would be worth this investment. Just
+imagine the possibilities for player interaction if we could offer each other
+missions....</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-left:.5in'><span style='font-size:10.0pt;
+font-family:Verdana'>I agree a system like this would be loads of fun and add a
+lot of immersion and community building to the game. I just don't see it as
+feasible. There's a reason contract law is a massive industry consisting of an
+army of attorneys, and not is not run by a computer program. The human element
+to contracts is far too unpredictable. </span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>Understood,
+and no offense taken. I happen to come to a different conclusion, but your
+points about the difficulty of getting something like this right are
+well-founded.</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>I would
+only suggest that a game-run contract system actually has an important
+advantage over a RL contract system: freedom of action in the game world is
+much more constrained.</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>In RL you
+can write a contract to do anything (legal). Trying to write rules to reflect
+this apparently infinite breadth of human action is both the source of economic
+productivity and legal wrangling.</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>In a
+computer game, however, you have to spell out specific contract types and
+terms. This means you don't get all the economic advantages in a game because
+you're excluding economic activity that's not allowed by your contract types.
+But it also means that you don't get all the questions of interpretation of RL
+contracts. And when interpretation isn't a factor, you don't need judges or
+lawyers.</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>By
+constraining contracts to numerically-verifiable terms, you create a system
+that a perfectly impartial adjudicator (the computer) can successfully resolve.</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>That's
+why I remain optimistic about a computer game with contracts. You're absolutely
+right that it won't be easy to implement well, but &quot;hard&quot; doesn't
+necessarily imply &quot;practically impossible.&quot; Given a good design, and
+a careful implementation of a contract resolution engine, I think this could
+work.</span></p>
+
+</div>
+
+</body>
+
+</html>

@@ -1,0 +1,518 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=Generator content="Microsoft Word 11 (filtered)">
+<title>Sensor Ops and You: A Design Proposal</title>
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:Verdana;
+	panose-1:2 11 6 4 3 5 4 4 2 4;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0in;
+	margin-bottom:.0001pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+a:link, span.MsoHyperlink
+	{color:blue;
+	text-decoration:underline;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:navy;
+	text-decoration:underline;}
+@page Section1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.25in 1.0in 1.25in;}
+div.Section1
+	{page:Section1;}
+ /* List Definitions */
+ ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+-->
+</style>
+
+</head>
+
+<body lang=EN-US link=blue vlink=navy style='text-justify-trim:punctuation'>
+
+<div class=Section1>
+
+<p class=MsoNormal><b><span style='font-family:Verdana'>Sensor Ops and You: A
+Design Proposal</span></b></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'><a
+href="http://forums.station.sony.com/swg/board/message?board.id=lightspeed&amp;message.id=27971">http://forums.station.sony.com/swg/board/message?board.id=lightspeed&amp;message.id=27971</a></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>2004/06/30</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>I'd like
+to see a detailed physics model that allows ships in <i>Jump to Lightspeed</i>
+to use stealth and disguise.</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>Consider
+the ways a spaceship could be detected or identified (these are just some
+examples I dreamed up):</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<ul style='margin-top:0in' type=disc>
+ <li class=MsoNormal><b><span style='font-size:10.0pt;font-family:Verdana'>Active
+     scan </span></b></li>
+ <ul style='margin-top:0in' type=circle>
+  <li class=MsoNormal><i><span style='font-size:10.0pt;font-family:Verdana'>Physical
+      </span></i></li>
+  <ul style='margin-top:0in' type=square>
+   <li class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>radar
+       </span></li>
+   <li class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>laser
+       reflection (ladar)</span></li>
+  </ul>
+  <li class=MsoNormal><i><span style='font-size:10.0pt;font-family:Verdana'>Nuclear
+      </span></i></li>
+  <ul style='margin-top:0in' type=square>
+   <li class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>meson
+       deflection </span></li>
+   <li class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>pion
+       absorption (think of this as the Star Wars &quot;scanning&quot;
+       technology)</span></li>
+  </ul>
+ </ul>
+ <li class=MsoNormal><b><span style='font-size:10.0pt;font-family:Verdana'>Passive
+     scan </span></b></li>
+ <ul style='margin-top:0in' type=circle>
+  <li class=MsoNormal><i><span style='font-size:10.0pt;font-family:Verdana'>Nuclear
+      </span></i></li>
+  <ul style='margin-top:0in' type=square>
+   <li class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>neutrino
+       emission</span></li>
+  </ul>
+  <li class=MsoNormal><i><span style='font-size:10.0pt;font-family:Verdana'>Gravitic
+      </span></i></li>
+  <ul style='margin-top:0in' type=square>
+   <li class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>mass
+       displacement</span></li>
+  </ul>
+  <li class=MsoNormal><i><span style='font-size:10.0pt;font-family:Verdana'>Electromagnetic
+      </span></i></li>
+  <ul style='margin-top:0in' type=square>
+   <li class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>infrared
+       (heat) </span></li>
+   <li class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>visual
+       </span></li>
+   <li class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>size </span></li>
+   <li class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>shape
+       </span></li>
+   <li class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>color/decals</span></li>
+   <li class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>ultraviolet
+       </span></li>
+   <li class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>X-ray
+       </span></li>
+   <li class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>magnetic
+       field</span></li>
+  </ul>
+  <li class=MsoNormal><i><span style='font-size:10.0pt;font-family:Verdana'>Chemical
+      </span></i></li>
+  <ul style='margin-top:0in' type=square>
+   <li class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>ion
+       trail</span></li>
+  </ul>
+  <li class=MsoNormal><i><span style='font-size:10.0pt;font-family:Verdana'>Broadcast
+      </span></i></li>
+  <ul style='margin-top:0in' type=square>
+   <li class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>Identification-Friend-or-Foe
+       (IFF) code (military only) </span></li>
+   <li class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>ID
+       transponder</span></li>
+  </ul>
+ </ul>
+</ul>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>Note that
+&quot;active scans&quot; are detection-and-identification technologies that
+send out some kind of signal and then read the signal that bounces back (or
+not). (Think of these as like the sonar &quot;pings&quot; in movies about
+submarine warfare.) Active scanning is good for resolving details about other
+vessels, but it has the drawback of letting other ships know exactly where you
+are and what you're doing. They use up a lot of power, too.</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>Passive
+scans, by contrast, just take in information about other ships that they give
+off or deliberately broadcast. These don't always give you a lot of detail, and
+you need to be fairly close to the other ship for certain types of passive
+scans to work, but they're good for detecting other ships when you don't want
+to be detected yourself.</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>So --
+given all these ways that we can detect objects in space, and, once detected,
+learn specific information about them, wouldn't it be interesting if JtL
+allowed us to explore all these phenomena as sensor options?</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<div class=MsoNormal align=center style='text-align:center'><span
+style='font-size:10.0pt;font-family:Verdana'>
+
+<hr size=2 width="100%" align=center>
+
+</span></div>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>You're a
+Imperial frigate patrolling the spacelanes to control the piracy that's been
+reported in this sector of space. Your active radar scan is always on,
+&quot;pinging&quot; the space around you. This has the double effect of letting
+you &quot;see&quot; any ships in range of your radar, but also of warning off
+any Bad Guys (because they can detect your active scan).</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>Today
+you're cruising along near a &quot;hot&quot; star (one that puts out a lot of
+junk radiation that makes scans difficult) when your radar picks up a ship far
+ahead. You move in close enough to run an ID scan (passively reading the ID
+transponder code broadcast by all ships except pirates). The ID scan says it's
+the <i>Ghazal</i>, a YT-1300 bulk freighter registered out of Corellia, but you
+order your sensor operator to run a neutrino emission scan [to roughly
+determine the ship's power output] and a gravitic displacement scan [to measure
+the ship's tonnage] just in case. Given the recent outbreak of piracy, you want
+to make sure this ship really is who she claims to be.</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>The
+passive scans report that the <i>Ghazal</i> is a little bigger than expected,
+but within the upper boundary for freighters. Still, something in your gut is
+nagging you. Your sensor technician is pretty good, so you order your ship in a
+little closer and send to the <i>Ghazal</i> to submit to a routine cargo scan.
+(You're a dedicated servant of the Empire; you don't ask for permission.)
+Another ship shows up on the radar in the distance (too far for ID
+transmission), but you want to finish with the <i>Ghazal</i> first.</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>As you
+close to visual (and cargo scanning) range of the <i>Ghazal</i>, your sensor
+tech completes a set of active electromagnetic (EM) scans, and you can now see
+the ship for yourself visually. She appears to have more gun turrets than the
+typical bulk freighter... and the turrets appear to be sporting quad turbolaser
+cannons, which are <i>way</i> more powerful than usual....</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>Suddenly
+your sensor tech looks sharply up at you and says, &quot;Sir, infrared
+emissions suggest that this ship is masking its real power signature!&quot; The
+readings on the neutrino scan spike upward abruptly as the <i>Ghazal</i> feeds
+power from its shielded (and sliced) engines to its weapons systems -- all of
+which suddenly lock on to you. It's a pirate! She's been using illegal
+technology to mask her power signature from other ships, and more illegal
+technology to change her ID transponder code to that of a ship with no
+outstanding warrants. This must be the ship that's been attacking the honest
+merchants in this sector!</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>You order
+your ship to power up its weapons, but the fake <i>Ghazal</i> is already firing
+on you. Normally your frigate would be more than a match for a freighter, but
+this is obviously no ordinary freighter... and that's when you notice that the
+ship you had seen just at the edge of your radar is running toward you. And so
+is the ship that has just appeared from out of the photosphere of that nearby
+&quot;hot&quot; star, where it was using the noise of the star to hide from
+most scans.</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>Are these
+ships friends coming to your rescue? Or are they more pirates, which could put
+you in real jeopardy?</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>Better
+run your sensor scans!</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>So would
+anyone else like to see this kind of thing in <i>Jump to Lightspeed</i>? Or is
+it too complicated, and we should just stick to quick-and-dirty fights?</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<div class=MsoNormal align=center style='text-align:center'><span
+style='font-size:10.0pt;font-family:Verdana'>
+
+<hr size=2 width="100%" align=center>
+
+</span></div>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>2004/06/30</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-left:.5in'><span style='font-size:10.0pt;
+font-family:Verdana'>Janson wrote:</span></p>
+
+<p class=MsoNormal style='margin-left:.5in'><span style='font-size:10.0pt;
+font-family:Verdana'>This may be something that gets included with capitol
+ships, though. It would be necessary for them, really. </span></p>
+
+<p class=MsoNormal style='margin-left:.5in'><span style='font-size:10.0pt;
+font-family:Verdana'>Flat, how would you figure this would be implemented? </span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>You're
+right about the applicability of this idea to capital ships, and I should have
+said so. Let me try it now:</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>This
+stuff is really intended for multi-person ships, and not for starfighters.
+Basically the only sensor stuff a starfighter needs is an integrated radar/ID
+transponder analyzer to recognize other ships, an ID transponder of its own,
+and possibly a sensor jammer (although all this is for is to make it harder for
+other ships to get lockons). More advanced sensors are really only needed on
+capital ships and certain highly tweaked freighters.</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>Of
+course, if other types of ships are ever introduced, such as research ships or
+safari vessels, then they'd probably want more complete sensor packages, too.
+But the full set of sensors (basically everything I proposed in my original
+message) would really only be seen on purely military craft.</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>As for
+how to implement this idea, there are three key areas that would need code:</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<ul style='margin-top:0in' type=disc>
+ <li class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>ships
+     must have the physical characteristics described (mass, radiation, etc.) </span></li>
+ <li class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>ships
+     must have sensors that can read these characteristics of other ships </span></li>
+ <li class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>space
+     features must block or distort some of these characteristics from sensors</span></li>
+</ul>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>You could
+get more complicated with the idea of ships having detailed characteristics
+that can be detected, but these are the essential elements that would have to
+be implemented in the <i>Jump to Lightspeed</i> code. The good news is that
+once you have these three essential concepts coded to any degree, adding new
+types of characteristics (and new sensors to reveal those characteristics)
+would be relatively simple.</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>Easy for
+me to say, of course.</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<div class=MsoNormal align=center style='text-align:center'><span
+style='font-size:10.0pt;font-family:Verdana'>
+
+<hr size=2 width="100%" align=center>
+
+</span></div>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>2004/07/01</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-left:.5in'><span style='font-size:10.0pt;
+font-family:Verdana'>NattyDreadlock wrote:</span></p>
+
+<p class=MsoNormal style='margin-left:.5in'><span style='font-size:10.0pt;
+font-family:Verdana'>... at some point smaller Imperial patrol/scout ships need
+to have similar, but lesser versions of these senors for player controlled
+vessels. Now these smaller player controlled Imp ships may have problems
+handling some of the larger, stronger or better upgraded freighters, but the
+Imp player's identification of the &quot;illegal&quot; ship could possibly
+create a TEF, plus he can send message to friends to look out for the ship if
+he can't engage or if the ship escapes. </span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>This is
+exactly the kind of great gameplay my sensors suggestion is designed to
+promote.</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>A little
+background might be useful here. I have several reasons for being interested in
+getting broad-spectrum sensing features into the space part of SWG, but three
+reasons stand out.</span></p>
+
+<p class=MsoNormal><b><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></b></p>
+
+<p class=MsoNormal><b><span style='font-size:10.0pt;font-family:Verdana'>Advanced
+Tactical Gameplay</span></b><span style='font-size:10.0pt;font-family:Verdana'>:
+Advanced sensors would never be necessary for players who just want to duke it
+out, but players who enjoy exploring tactical options in combat need a detailed
+sensor system. Ships must have enough properties (size, mass, heat/power
+signature, ID, etc.), and space must have effects on those properties (nebulae
+can hide your ship or light it up, stars can mask your radiation, etc.) to give
+players a satisfying space combat experience beyond &quot;fly, shoot, fly,
+shoot.&quot;</span></p>
+
+<p class=MsoNormal><b><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></b></p>
+
+<p class=MsoNormal><b><span style='font-size:10.0pt;font-family:Verdana'>Enhanced
+Roleplaying</span></b><span style='font-size:10.0pt;font-family:Verdana'>: As
+suggested in the story of the Imperial frigate, having lots of sensor options
+allows players to roleplay characters who employ tactics of deception, and
+allows other players to roleplay characters who seek to expose what is hidden.
+A rich sensing system makes these roleplaying styles possible.</span></p>
+
+<p class=MsoNormal><b><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></b></p>
+
+<p class=MsoNormal><b><span style='font-size:10.0pt;font-family:Verdana'>Strong
+<i>Star Wars</i> Resonance</span></b><span style='font-size:10.0pt;font-family:
+Verdana'>: With a Galactic Civil War playing havoc with law and order, the
+seamier parts of the galaxy are able to operate more openly... but some amount
+of hiding is still necessary. A richly detailed sensor system offers a greater
+number of more interesting gameplay options to SWG players who want to explore
+the world of Boba Fett, Calo Nord, Prince Xizor, and others. In particular,
+scanning technology as one form of sensor operations has been a part of Star
+Wars products from the original movie (remember the Imperial scanning team that
+goes -- briefly -- into the <i>Millenimum Falcon</i> on the Death Star?) to the
+<i>TIE Fighter</i> space combat game (the cargo container scanning challenge)
+that <i>Jump to Lightspeed</i> is to some degree supposed to resemble.</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>I think
+there's enough gaming goodness inherent in a strong/deep sensor system to make
+it worth having in SWG's space game. It's probably not something that can
+implemented in the initial release, but I hope we'll see something like it some
+day.</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<div class=MsoNormal align=center style='text-align:center'><span
+style='font-size:10.0pt;font-family:Verdana'>
+
+<hr size=2 width="100%" align=center>
+
+</span></div>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>2004/07/07</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-left:.5in'><span style='font-size:10.0pt;
+font-family:Verdana'>RontoMike wrote:</span></p>
+
+<p class=MsoNormal style='margin-left:.5in'><span style='font-size:10.0pt;
+font-family:Verdana'>Great idea! I had a similar (but much more simplistic)
+idea.... have the JtL in-game &quot;radar&quot; operate on a line-of-sight that
+can be blocked by planets &amp; asteroids. (Maybe have nebulae have a % chance
+of blocking sensors, depending on the sophistication of the sensor package.) </span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>I imagine
+a more advanced sensor system still being able to use the &quot;radar&quot;
+display -- it just gets a few more controls added to it to let you select
+between the various scan modes.</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>For
+example, you'd start out in the Passive EMS scanning mode, where you could pick
+up information on nearby energy sources without broadcasting your own location
+(assuming you've turned off your ID transponder). Below your scope would be two
+buttons: &quot;Passive EMS&quot; and &quot;Active EMS&quot;. Clicking on either
+of these would reveal a radial menu of sensor options, including
+&quot;All&quot;.</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>So if you
+then clicked on &quot;Active EMS&quot; | &quot;All&quot;, your ship would start
+&quot;pinging&quot; with the entire suite of active sensors to locate and describe
+nearby objects. (This is where I'd like to see a Sensor Ops or Avionics
+discipline -- someone with better sensor skills should be able to get more
+information about other ships, in the same way that Scouts/Rangers get more
+detailed creature stats.) Or you could choose &quot;Active EMS&quot; |
+&quot;Radar&quot; and have your scope work just like it does now on the ground
+(with possibly a couple of enhancements for space combat).</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-left:.5in'><span style='font-size:10.0pt;
+font-family:Verdana'>This idea would also require some sort of object size vs.
+ship size check.... a Star Destroyer would have a much harder time hiding in an
+asteroid field than an X-Wing.... </span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>Which is
+absolutely as it should be. An ISD basically shouldn't care if you can see it
+-- in fact, the &quot;shock and awe&quot; they are intended to inspire <i>depend</i>
+on their being seen; the big Imperial ships should normally be doing everything
+they can to light up every sensor within a parsec. If their sheer size and
+destructive capability can persuade you to give up because the Emperor is too
+strong to fight, so much the better.</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>From the
+Empire's point of view, of course. ;-)</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>Although
+there are some Rebels who &quot;prefer a straight fight to all this sneakin'
+around,&quot; you're right that the Rebellion would benefit more from having an
+enhanced sensor environment in SWG. Being able to use &quot;natural cover&quot;
+(nebulae, asteroids, stars, etc.) would give offer Rebels the tactical options
+necessary for the shadowy hit-and-run strikes that should be their modus
+operandi. (I don't recall seeing in the movies any Red Squadron pilots flying
+around looking for TIE fighters and saying things like, &quot;d00d, u wanna
+duel?&quot;, then cloning and doing it again....)</span></p>
+
+</div>
+
+</body>
+
+</html>

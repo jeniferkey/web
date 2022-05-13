@@ -1,0 +1,1158 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=Generator content="Microsoft Word 11 (filtered)">
+<title>Implementing Space Commerce: A Design Proposal</title>
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:Verdana;
+	panose-1:2 11 6 4 3 5 4 4 2 4;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0in;
+	margin-bottom:.0001pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+a:link, span.MsoHyperlink
+	{color:blue;
+	text-decoration:underline;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:navy;
+	text-decoration:underline;}
+@page Section1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.25in 1.0in 1.25in;}
+div.Section1
+	{page:Section1;}
+ /* List Definitions */
+ ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+-->
+</style>
+
+</head>
+
+<body lang=EN-US link=blue vlink=navy style='text-justify-trim:punctuation'>
+
+<div class=Section1>
+
+<p class=MsoNormal><b><span style='font-family:Verdana'>Implementing Space
+Commerce: A Design Proposal</span></b></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'><a
+href="http://forums.station.sony.com/swg/board/message?board.id=lightspeed&amp;message.id=28832">http://forums.station.sony.com/swg/board/message?board.id=lightspeed&amp;message.id=28832</a></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>2004/07/02</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><b><span style='font-size:10.0pt;font-family:Verdana'>INTRODUCTION</span></b></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>I believe
+that SWG and <i>Jump to Lightspeed</i> will be more fun with features that
+support space-based commerce -- in other words, space needs to have features to
+support both combat <i>and</i> commerce.</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>To this
+end, I've put together a number of ideas to support commerce in space. Some of
+them I've already discussed in other threads, some are new. The main new idea I
+get to toward the end of this message. If you're terminally impatient (heh) you
+can skip to the &quot;SHIPPING TERMINALS&quot; section, but I hope you'll try
+reading through the preliminary comments first -- they'll help the rest of this
+message make more sense.</span></p>
+
+<p class=MsoNormal><b><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></b></p>
+
+<p class=MsoNormal><b><span style='font-size:10.0pt;font-family:Verdana'>SPACE
+EXPANSION: THE COMMERCIAL GAME</span></b></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>I put
+together a fairly detailed list of ideas to support space-based commerce in my
+thread &quot;Space Expansion: The Commercial Game&quot; (Core Systems thread
+#17565). This discussion wasn't so much about how to implement ideas for space
+commerce as it was to talk about what kinds of commerce the Space Expansion
+ought to have. It was a pretty good discussion, but I wouldn't mind giving
+these ideas a little more exposure -- if anyone thinks it might be useful to
+repost that thread over here in the actual Jump to Lightspeed forum, let me
+know.</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>The core
+of that thread that relates to this one is the list of three main types of
+space-based commercial service:</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<ul style='margin-top:0in' type=disc>
+ <li class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>passenger
+     transportation </span></li>
+ <li class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>freight
+     delivery </span></li>
+ <li class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>cargo
+     sales</span></li>
+</ul>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>So how
+can we get these features?</span></p>
+
+<p class=MsoNormal><b><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></b></p>
+
+<p class=MsoNormal><b><span style='font-size:10.0pt;font-family:Verdana'>PLAYER
+CONTRACTS</span></b></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>There's
+an idea I had a while back that would support space-based commerce without
+needing to implement any other new features. This is because it's a major new
+feature itself that goes well beyond supporting just space-based commerce.</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>This is
+the concept of Player Contracts. I've designed a contract system that would
+allow players to establish long-term and repeated contracts with each other to
+securely perform many different kinds of economic transactions, from the basic
+goods-for-money trade we currently use to crafting, repair, guard duty, player
+bounties(!), and even in-game marriage contracts.</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>If you'd
+like to check out the details of this idea, you can read the messages in thread
+#4421 in the Core Systems forum (&quot;Player Contracts: A Design
+Document&quot;) -- there's also a somewhat shorter version (&quot;Player
+Contracts: The Short Version&quot;) in thread #15183 of the Core Systems forum
+that gives you all the details in one message. (Admittedly, it's not all <i>that</i>
+short.)</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>A couple
+of the contract types I propose are Transport and Delivery. Transport contracts
+allow you to make deals with players to move items or players to a specified
+location; Delivery contracts let you agree to give specific items to another
+player.</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>If just
+these two types of player contracts were available, we would have a formal,
+game-backed way to perform two of the most requested space commerce services:
+passenger service and freight delivery service. There's nothing preventing us
+from doing these things informally the day that JtL ships... but it doesn't
+appear that there'll be any features to reliably support doing those things,
+either. And without a formal in-game system that protects the players who agree
+in good faith to make contracts with other players, these kinds of commerce
+just won't happen -- it'll be too easy to cheat the other guy by taking his
+money or goods or services without providing the agreed-on payment.</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>A game-implemented
+contract system would be exactly the kind of formal system needed to be able to
+make trustable deals. But how would this actually work in practice?</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>One
+feature of player contracts that would make a freight delivery system practical
+would be contract terminals. As a freighter pilot, you'd be able to go to a
+contract terminal near your favorite starport, find a delivery mission that
+suits you, accept the mission, take &quot;delivery&quot; of the item (I put
+delivery in quotes because you never actually see the item in your inventory --
+it's put in a special contract account to prevent theft), travel to your
+destination, and have the item &quot;transferred&quot; to the delivery
+terminal, at which point your bank account is credited with the freight delivery
+fee offered in the contract.</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>Sound
+like it might work?</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>It must
+be said that although the developers have discussed the idea of implementing
+some system supporting player missions (which really is what my player contract
+system winds up being), they haven't mentioned it publicly in months. Nor do
+they show any signs of considering implementing anything like a player contract
+or mission system.</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>So is
+there some other way to support space-based commerce? Is there some other
+relatively simple feature the developers could implement that supports not just
+freight delivery but cargo sales?</span></p>
+
+<p class=MsoNormal><b><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></b></p>
+
+<p class=MsoNormal><b><span style='font-size:10.0pt;font-family:Verdana'>SHIPPING
+TERMINALS</span></b></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>Having
+gone through all the background details, let's cut to the chase. What we need
+is this: Bazaar terminals that can be placed inside starports, and that have
+been enhanced in two ways: to allow players to enter &quot;want ads,&quot; and
+to provide automatic payments for delivering selected items to selected
+off-planet destinations.</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>(In what
+follows, remember the distinction between freight and cargo: freight is stuff
+you carry for someone else for a predetermined fee, while cargo is stuff you
+buy in one place and carry to sell in another place in the hope of making a
+profit between the two transactions.)</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>What we
+need is a new type of terminal -- a Shipping terminal -- that works just like a
+Bazaar terminal but with a couple of enhancements and a restriction:</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<ul style='margin-top:0in' type=disc>
+ <li class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>has a
+     new &quot;Wanted&quot; category (in addition to Armor, Misc, Resources,
+     etc.)</span></li>
+ <li class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>has two
+     new columns on all item categories (except the new Wanted category):</span></li>
+ <ul style='margin-top:0in' type=circle>
+  <li class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>Delivery
+      Location</span></li>
+  <li class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>Delivery
+      Fee</span></li>
+ </ul>
+ <li class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>is only
+     found inside starports</span></li>
+</ul>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>When you
+offer an item for sale on the Bazaar terminal, you have the option of marking
+it for delivery to another starport. If you take this option by selecting a
+Delivery Location starport from a pulldown list, you're prompted to enter a
+(non-zero) Delivery Fee as well. If you don't enter a Delivery Location, the
+item is listed for sale just like items are listed currently. Otherwise the
+delivery fee is immediately deducted from your bank account (if you can't pay
+it, you aren't allowed to mark the item for delivery) -- that way when someone
+delivers it they are assured of payment. If you later cancel the offer, the delivery
+fee is credited back to your bank account.</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>[Question:
+Would we want to allow items to be delivered to starport Shipping terminals on
+the same planet as the source Shipping terminal? Or should the pick list of
+possible delivery starports exclude all starports on the same planet where
+you're placing the item for sale?]</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>Only
+operators of multi-player ships would be able to accept freight delivery
+missions from the Shipping terminal. Starfighters will already have plenty of
+cool things that only they can do; they don't need to be able to haul freight
+or cargo, too.</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>To
+prevent the theft of freight, you never get the actual freight items in your
+ship -- you just get a ship's manifest that lists the items you're moving from
+one Shipping terminal to another. When you take a freight delivery contract
+from a Shipping terminal, the item is marked and displayed as inactive to
+anyone viewing that item in a Bazaar or Shipping terminal. If you get killed in
+space, the item is marked back to active. Only when you successfully land at
+your destination and redeed your ship is the item removed from the source
+Shipping terminal, added to the destination Shipping terminal, and the delivery
+fee deposited to your bank account with an in-game email message telling you
+about the transfer. (It might also be nice to send an in-game email message to
+the person who offered the delivery fee to let him or her know that the item
+has been successfully delivered.)</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>[Note
+that if piracy and docking are ever implemented, having a ship's manifest of
+items being delivered would be a good source of items for pirates to steal.]</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>[Additional
+enhancement: What about allowing anyone to mark an item for delivery, even
+after it's originally been added by someone else to a Bazaar terminal? That way
+if you're on Lok and you need 1000 units of Resource X and someone is selling
+it on Dantooine, you can offer a delivery fee for someone to bring it to you.
+The only catch is that the person who placed the item for sale would have to
+authorize the delivery, otherwise you could have people griefing merchants by
+having their products shipped to undesirable locations.]</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>Finally,
+there would also be a new button next to the &quot;My Sales&quot; button on the
+Bazaar terminal -- this would be labeled &quot;Wanted&quot;. Pressing it would
+allow you to create what would essentially be want ads. You'd enter text into
+two fields: a short Subject line (probably with something like a 30-character
+limit), and a Details text entry box. You'd briefly describe what you want to
+sell (or buy!) in the Subject line, then provide any other necessary
+information in the Details box. When you hit OK, this would create a new
+&quot;item&quot; that's only shown when you click on the &quot;Wanted&quot;
+category on any Bazaar or Shipping terminal. All Wanted items would
+automatically have, say, a 3-day lifespan, but you'd be able to cancel Wanted
+messages in a way similar to how you cancel sale offers on Bazaar terminals
+currently (the only difference being that you wouldn't get an actual physical
+item to retrieve, since there was never one to begin with).</span></p>
+
+<p class=MsoNormal><b><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></b></p>
+
+<p class=MsoNormal><b><span style='font-size:10.0pt;font-family:Verdana'>SHIPPING
+EXAMPLE</span></b></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>So how
+would all this actually work? Let's try an example.</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>Congratulations!
+You're now the proud owner-operator of a YT-1300 -- she may not look like much,
+but she's got it where it counts, and you're ready to start earning back what
+you paid to buy her.</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>You walk
+into the Coronet Starport with your YT-1300 deed in your inventory. Set amid
+the ticket stations are several new terminals -- they look sort of like Bazaar
+terminals, but seem to have a few more blinking lights.</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>You
+access this new Shipping terminal, and click on the &quot;Resource&quot;
+category. On the right side of the terminal screen, the usual list of resources
+for sale appears... but you notice that there are two new columns: one for
+&quot;Delivery Location&quot; that for some resources lists the names of
+starports on various planets, and one for &quot;Delivery Fee&quot; that shows
+some number. All the resources marked as having a Delivery Location also have a
+Delivery Fee listed.</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>There's
+one item that shows a 500-credit delivery fee for taking some Radioactives to
+Theed Starport. You were already thinking of heading that way, so you mark that
+item and click on the &quot;Deliver&quot; button. You notice that there are two
+other items whose owners want them delivered to the Shipping terminals at the
+Theed starport, so you click on &quot;Deliver&quot; for them, too. Now all
+three items are grayed out on the Shipping terminal display.</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>You deed
+your ship, travel (uneventfully!) to Theed starport, and redeed your ship when
+you get there. As you stand on your two feet again, you notice that your email
+icon is blinking. When you click on it to bring up your Email window, you see
+that there are three messages waiting for you, each one telling you that the
+appropriate delivery fee has been credited to your bank account.</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&quot;All
+too easy!&quot; you think with a grin. Then you realize that while you were in
+Coronet you could have checked the Wanted category for Bazaar terminals on
+Naboo to see if there were any items you could have bought in Coronet to bring
+to Theed in the hope of making a profit.</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>You
+figure you'll head back to Coronet, so you access the Theed Shipping terminal
+and select the Wanted category for Corellian terminals. Someone is looking for
+Lokian leather; someone else wants as many crates of Muon Gold as you can offer
+(but you're not desperate enough to try smuggling spice -- yet); and -- hey!
+someone wants Nabooian Fiberplast. You click on the Resources category, and
+sure enough, someone is selling 1000 units of high-quality Nabooian Fiberplast
+for 6000 credits. That seems a bit steep, but the person who left the Coronet
+want ad says he'll pay 8 credits per unit. That would be a 2000 credit profit,
+which would definitely pay the electric bill for a few days.</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>So you
+buy the fiberplast (before someone else can) and send an IM to the guy who
+wrote the want ad -- no response. You send an email, then jump in your ship and
+head back to Coronet.</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>When you
+get there, there's still no reply to your email. Now you have to make a tough
+choice -- do you hang on to the fiberplast in the hope of selling it to the
+person who wrote the want ad? Or do you put it onto the Coronet Bazaar yourself
+to try to make back what you paid for it (and maybe a little profit in the
+bargain)?</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>Welcome
+to the exciting life of a freighter captain. </span><span style='font-size:
+10.0pt;font-family:Wingdings'>J</span></p>
+
+<p class=MsoNormal><b><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></b></p>
+
+<p class=MsoNormal><b><span style='font-size:10.0pt;font-family:Verdana'>QUESTIONS</span></b></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>So --
+would this work, or have I missed some obvious flaw?</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>Are there
+other features that would improve these ideas?</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>Would
+this be too hard for the developers to implement?</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>Is there
+some other entirely different (and better) way to get space commerce?</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<hr>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>2004/07/02</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>Thanks
+for the comments, folks -- they're appreciated.</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>In fact,
+they've reminded me of a few additions I ought to make, or at least suggest.</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>1. Limit
+the number of items that can be concurrently taken for delivery. We don't want
+someone coming in and taking every single freight item from a Shipping terminal
+-- would 5 items (no more than 2 from any one terminal) be enough?</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>2.
+Delivery from Bazaar terminals. Suppose you're using a regular Bazaar terminal
+in a player city with no starport. Does that mean you can't offer an item for
+delivery (since there's no way to pick which Shipping terminal the item should
+be shipped from)? Should the rules for how items are deposited be changed so
+that you could pay a fee (in addition to the delivery fee you're offering a
+freighter captain) to have your item transferred to the nearest starport's
+Shipping terminal when you put it up for sale on your Bazaar terminal? Or
+should we make players have to go to an actual starport Shipping terminal to be
+able to mark items for delivery to other worlds?</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>3. NPC
+delivery missions. We want to be careful with these. If it's just a matter of
+delivering freight, it would probably be OK to have &quot;fake&quot; items to
+be delivered from one planet to another -- freight items (per my original
+suggestion) are never tangible items; they're just marked on a ship's manifest.
+What we don't want is NPC <i>cargo</i> missions, since that suggests that
+there'd be NPC-created items on Bazaar/Shipping terminals that we could
+actually purchase... which would corrupt the entire player-crafting economy of
+SWG.</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>4.
+Smuggling. This probably deserves a thread all to itself! I've never played a
+Smuggler, so I don't know how this profession currently does its thing. But
+given the hugely iconic nature of Han Solo's character to the Star Wars
+literary universe, I can't imagine that the developers don't have some new
+features in mind for Smugglers in a post-<i>Jump to Lightspeed</i> world. So I
+don't want to go too crazy with suggestions here, but it certainly seems that
+smuggling ought to be involved somehow in shipping as I've described it so far.</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>My
+suggestion is to have Imperial ships in space be able to scan freighters (in
+normal space). Imperial ships within a certain distance would be able to
+&quot;see&quot; your ship's manifest. If you were carrying something illegal,
+that would give you a TEF to them and they'd be able to attack you. Or perhaps
+Shipwrights will be able to craft smuggling holds on certain ships
+(*cough*freighters*cough*) -- smuggled items wouldn't show up on your ship's
+manifest, but Imperial or Rebel ships that got close enough to your ship and
+had the necessary sensors (see my thread &quot;Sensor Ops and You&quot; in this
+forum) could perform a cargo scan. If the scan turned up any items that weren't
+on your manifest, or that were obviously illegal, or if the scanning ship was
+Rebel and the scanned items were clearly pro-Imperial, boom -- TEF time.</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<hr>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>2004/07/03</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><b><span style='font-size:10.0pt;font-family:Verdana'>Shipping
+Terminals</span></b><span style='font-size:10.0pt;font-family:Verdana'> </span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>I
+actually mistyped my post earlier, I should have written “buy orders” not “sell
+orders”. Essentially the problem I see is that if players are given the ability
+to say “Hey I want this item, I’ll pay you this much, have it delivered to me”
+is that you’ve now put every store out of business. You underestimate how lazy
+people can be. Once a system is put into place to allow people to request items
+they want it’s all they’ll use, especially with how frustrated people already
+are about empty vendors, small selections, etc, etc. That’s why I say it’ll
+kill the Merchant profession.</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>Now that
+being said, if you’re instead talking about a player buying an item from a
+bazaar that’s located on another planet and <b><u>then</u></b> saying that
+they’d like to have it shipped to their current location, that I could see
+working because it’s fostering additional player involvement without taking it
+away from someplace else. </span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>Let's be
+clear about what I'm suggesting here. I'm proposing two new features: 1)
+delivery as freight of an item from a starport Shipping terminal on one planet
+to a starport Shipping terminal on another planet, and 2) delivery as cargo of
+an item that someone requested in a Want Ad into the Bazaar terminal where the
+ad was placed (which would include Shipping terminals).</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>Even
+assuming that a Want Ad system designed to promote interplanetary cargo
+shipping would additionally be used by some people to to try to avoid having to
+walk around to find desired goods (and I agree that it would), I don't think
+there'd be as much damage done to Merchants as you suggest. In the first place,
+just being able to ask for something (as in a Want Ad) doesn't imply that
+you'll always get it -- people will still have to get up and go looking for
+some things from time to time.</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>In the
+second place, why is it good for players to be frustrated by having to walk
+around for hours only to find empty vendors? If players can use the Want Ads to
+post a message saying, &quot;Bring Item A to me personally and I'll pay you X
+credits for it,&quot; how is that worse than the current pointless searching of
+vendors, some of which will be empty?</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>Finally,
+and most importantly, we currently have the situation of people going to the
+nearest Bazaar terminal to look for Item A, but never finding it because no one
+realizes that someone wants that item. A terminal-based Want Ad system would in
+fact <i>expand</i> economic activity by allowing sales that would otherwise
+never happen. Far from putting Merchants out of business, it would expand their
+sales opportunities. The ability to easily see what people actually want
+(instead of spending the resources to make a bunch of things most of which no
+one ever buys) would make Merchants <i>more</i> profitable, not less.</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>As
+someone who's played a Merchant, that sure seems like a good thing to me. </span><span
+style='font-size:10.0pt;font-family:Wingdings'>J</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<hr>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>2004/07/15</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-left:.5in'><span style='font-size:10.0pt;
+font-family:Verdana'>WesBelden wrote:<br>
+for it to have any chance of succesfully being implemented in my eyes, a limit
+on what can be transported by players on public transport (ie, what's currently
+in the game), or a heavy charge for carrying such things (resource containers
+going up by number of resources in each one, crates etc.) would have to be
+implemented. Similarly, the amount one can hold while in a fighter class ship
+would also have to be limited.</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>Agreed,
+and it's an excellent point.</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>I
+grumbled some time ago about wishing that SWG had implemented an
+&quot;encumberance&quot; system, since 100,000 units of steel taking up exactly
+the same amount of inventory space as Goru Rainstealer's calling card just
+makes no sense whatsoever. If encumberance was factored into carrying capacity,
+then the problem of freighter space (not to mention vehicle trunks and mount
+saddlebags) would automatically be solved.</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>Failing
+that, I suppose that there would have to be a rule in place that items could
+only be transferred from shipping terminals to ship &quot;manifests&quot; with
+X number of spaces (based on the size of your ship and available space not
+taken up by other ship systems like weapons or engines), and from ship
+manifests to delivery shipping terminals.</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>Of
+course, that does nothing to prevent someone from simply buying an item from a
+shipping terminal and placing it in their personal inventory, getting on a ship
+and going somewhere else, then placing that item for sale on another shipping
+terminal. So maybe this is another place where we need to make the distinction
+between freight (something you ship for someone else but that doesn't belong to
+you), which could use the terminal-&gt;manifest-&gt;terminal system, and cargo
+(something you buy yourself and take elsewhere to sell at what you hope will be
+a profit), which people will certainly transport in their personal inventory.</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-left:.5in'><span style='font-size:10.0pt;
+font-family:Verdana'>IgescaStorm wrote: </span></p>
+
+<p class=MsoNormal style='margin-left:.5in'><span style='font-size:10.0pt;
+font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-left:1.0in'><span style='font-size:10.0pt;
+font-family:Verdana'>Flatfingers wrote: </span></p>
+
+<p class=MsoNormal style='margin-left:1.0in'><span style='font-size:10.0pt;
+font-family:Verdana'>[... The only catch is that the person who placed the item
+for sale would have to authorize the delivery, otherwise you could have people
+griefing merchants by having their products shipped to undesirable locations.] </span></p>
+
+<p class=MsoNormal style='margin-left:.5in'><span style='font-size:10.0pt;
+font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-left:.5in'><span style='font-size:10.0pt;
+font-family:Verdana'>Why? If i bought an item from the bazaar, my money was
+sent to the seller. Now i can say another player, he shall bring it to me...
+Where is the grief? </span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>IgescaStorm,
+the original suggestion didn't include buying the item first; it was just about
+offering to buy an item after shipping it. You're right that if the item is
+purchased first, then it would be fine to allow the new owner to authorize
+delivery.</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>The key
+is to insure that only the owner of an item is allowed to determine what
+happens to that item.</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-left:.5in'><span style='font-size:10.0pt;
+font-family:Verdana'>Rykith wrote:<br>
+I was thinking that maybe the alot of these things can be tied to the Merchant
+profession. It would greatly enhance that profession. </span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>I was
+thinking that, too. </span><span style='font-size:10.0pt;font-family:Wingdings'>J</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>Just
+imagine if creative Master Merchants could be as powerful in their part of SWG
+as TKAs or CM/Pistoleers are in theirs....</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-left:.5in'><span style='font-size:10.0pt;
+font-family:Verdana'>TulasiKid wrote:<br>
+I haven't read Axelrod's work (was that something I was supposed to read in
+Macro Econ 1?) ... </span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>You do
+NOT want to get me started on this subject! (You just think some of my other
+messages are long....)</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>Although
+Axelrod's work has applications in Economics and other human-related fields,
+it's probably best known in Poli Sci circles; in particular it's directly
+relevant to Conflict Resolution studies.</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>Basically
+he used computer simulations to show that cooperative behavior can evolve even
+in a crowd of people who take advantage of other people, as long as certain
+rules are in place:</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<ul style='margin-top:0in' type=disc>
+ <li class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>participants
+     need to be able recognize each other </span></li>
+ <li class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>participants
+     need to be able to have multiple interactions with each other </span></li>
+ <li class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>participants
+     must not know how many possible interactions there might be</span></li>
+</ul>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>If those
+rules are in place in a multi-person system, then it turns out that a very simple
+strategy (known as &quot;Tit-for-Tat&quot;) can create an island of productive
+cooperation even in an ocean of advantage-takers.</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>I'll
+leave it at that; if you're interested (and this stuff really does turn out to
+have some fascinating resonances with designing multiplayer games), you can
+find a lot more information on the Web.</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-left:.5in'><span style='font-size:10.0pt;
+font-family:Verdana'>TulasiKid wrote:<br>
+... but I do know that in the 19th Century American economy, businesses and
+investors faced these very same kinds of problems owing to a lack of a
+regulatory infrastructure for enforcing trade and commerce. Reputation was an
+important aspect of doing business, because there often was nothing else for
+investors to rely on. </span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>Exactly
+right, and that's highly relevant to SWG and other MMOGs.</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>I wrote a
+background essay on this (in the old [now archived] Discussion forum, thread #
+938113) called &quot;Advanced Economic Systems in Online Games&quot;. The key
+point was that online games, including SWG, are basically stuck at a
+prehistoric level of economic activity. If you think about it, about all we can
+do are make one-shot deals with each other, either through the Secure Trade
+Window or Bazaar/vendor terminals.</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>And isn't
+that similar to the limits to economic activity in the 1800s, when you pretty
+much only did business with people you knew personally and/or locally? When there's
+no reason for you to trust some distant person, why do business with that
+person?</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>The
+vendors, Bazaar terminals, and Secure Trade Windows are all extremely valuable
+economic tools in SWG because they are sufficiently trustable to allow players
+who don't know each other to trust each other in business deals. But are they
+enough to really unleash the creative potential of players who enjoy making
+business deals with each other?</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>To
+encourage more advanced economic activity in SWG, we need more advanced
+economic features. I tried to imagine what the most important of those features
+might be, and the most crucial concept by far was our notion of enforceable
+contracts.</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>The idea
+that people can agree to some exchange, and that all parties to this exchange agreement
+can trust the entire legal system of their culture to effectively enforce all
+the (legal) terms of the agreement, is probably the single most crucial advance
+in economic history. This is because an enforceable contract system allows
+potential contractees who don't know each other to trust each other, because
+they can trust the system to require the other person to hold up their side of
+the deal. And that opens up more new economic opportunities than any other
+economic tool we humans have ever dreamed up.</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>So yes...
+I sort of would like to see a good, enforceable player contract system in SWG.
+If the theory behind it is correct, then the question is whether it's
+technically feasible. I think it is... but that question is better addressed in
+the other threads on this subject.</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-left:.5in'><span style='font-size:10.0pt;
+font-family:Verdana'>BattledroidStrider wrote:<br>
+It encourages Freighers to be running around ... </span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>That is a
+great way of putting it!</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>The truth
+is, we don't require player contracts or shipping terminals or any other new
+game mechanism to move cargo in JtL; we can do that informally the day JtL
+launches. But allowing players to do some thing is not encouraging players to
+do that thing.</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>Although
+there might be some diehard merchant types trying to make a living through
+freight shipping and cargo speculating in JtL, why bother when the game clearly
+isn't designed to support commercial gameplay? A set of in-game features to
+support freight and cargo shipping would take nothing away from combat gameplay
+-- in fact, they would enhance the purpose of combat beyond just pwning the
+other guy or levelling up. With commercial gameplay included, combat can also
+be about defending a merchant convoy from bloodthirsty pirates, or helping
+carry a crucial schematic to one's faction HQ or PA hall, or keeping the trade
+lanes safe from marauding creatures -- you get the idea.</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>In short,
+features to support space commerce are necessary to create the backdrop of
+everyday life before which the heroes of the Star Wars saga can play their
+roles.</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>As much
+fun as combat in JtL will be, it should be about more than just combat. As I've
+asked before: When only heroes can play, who needs heroes?</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-left:.5in'><span style='font-size:10.0pt;
+font-family:Verdana'>nasafan2 wrote:<br>
+increase the pay for illegal goods, spice/sliced weps, armor etc, but also make
+it a harsh punishment for getting caught with em. Being found out on the ground
+is not as bad as if the imps found out you were trying to actually transport
+the stuff! Puts a little risk in the game of spice running for all you
+smugglers out there. </span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>I'm up
+for that.</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>Seriously,
+out of all the possible commercial enhancements that JtL might bring, the most
+obvious would seem to be letting Smugglers be better than anyone else at using
+their personal starships for smuggling.</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>Currently
+Smugglers are on the board for a revamp after JtL goes live. If I were a
+Smuggler who wanted smuggling in space to be a part of that revamp, I'd already
+be coming up with ideas for how to implement that... (hint, hint).</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-left:.5in'><span style='font-size:10.0pt;
+font-family:Verdana'>Lasek wrote:<br>
+if a player were to grab a delivery mission, mark it as delivered (nobody else
+could take it).. And then log out or simply not go to the delivery location. He
+wouldn't be able to access or use the items, but he would be able to grief by
+not delivering them to the wanting person. </span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>Good
+point, Lasek. You're right; a freight delivery system would probably have to
+have some kind of guaranteed delivery period. One day might be excessive; how
+about two-hour delivery? If you haven't stashed it in the receiving terminal
+within two hours, it's yanked out of your ship and restored to
+&quot;available&quot; status on the shipping terminal.</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>If we
+really wanted to get complicated with it, we could charge &quot;overdue
+fines&quot; -- every hour beyond the two-hour limit, you lose 20% of the
+delivery payment. If the fines chew up all the delivery payment, then the item
+goes back to the original shipping terminal.</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>This
+still doesn't entirely address the problem of someone who takes a delivery item
+but doesn't deliver it... and then keeps taking it, over and over again, just
+to keep someone else from buying the item. If freight delivery is just NPC
+mission stuff, no problem, but if we're talking about delivering player
+freight, then that's a problem.</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>We
+probably also need to have some kind of counter that &quot;remembers&quot;
+whether you've taken some item, and doesn't let you select that particular item
+for delivery more than once per day.</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-left:.5in'><span style='font-size:10.0pt;
+font-family:Verdana'>TheHomicidalVerpine wrote:<br>
+For the npc cities: give players a higher reward for say running missions that
+take them from obscure locations to obscure locations. </span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>This is another
+idea that just makes good sense. One of the greatest game mechanics ever
+invented is the one that ties reward to risk -- that way players get to choose
+the level of risk with which they're comfortable, and they are rewarded
+commensurate with that level of risk.</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>And just
+to make it an even better idea, THV's suggestion also has the advantage of
+encouraging players to visit new places -- something SWG's developers have
+always been interested in encouraging.</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>Finally,
+this idea ties in well with the notion that cargo bought in a big city on a
+&quot;safe&quot; planet should sell for the most money in outposts on
+&quot;adventure&quot; planets. Again, link risk to reward, and encourage
+players to go places they haven't been.</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-left:.5in'><span style='font-size:10.0pt;
+font-family:Verdana'>AuleyDavyds wrote:<br>
+What do you think of the recent addition of the &quot;Auction&quot; chat
+channel? ... The advantage of this system is that it solves the expediency
+issue I mentioned earlier: someone seeking to buy something can type a request,
+and *if* the right smith/seller/merchant is on and sees it, the response can be
+immediate. </span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>I agree
+-- my first thought on seeing Q-3PO's announcement of the Auction channel was,
+&quot;Well, there's the first version of the 'Want Ads' feature I was asking
+for -- dang, these guys are quick!&quot;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>It's not
+quite as useful as a &quot;persistent&quot; message that can be searched for on
+a shipping terminal. It's also less convenient than a message that lives in the
+same place (i.e., on a shipping terminal) as the merchandise to be shipped. But
+it's a great starting point, and I'm delighted that the development team took
+the time to implement it.</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-left:.5in'><span style='font-size:10.0pt;
+font-family:Verdana'>AuleyDavyds wrote:<br>
+... a player who has a large amount (or any amount really, I guess) of
+high-quality resouces from a planet (let's say Talus), lists them as available
+on this new &quot;shipping bazaar&quot; system, and then a crafter can purchase
+them. When exactly does the delivery take place though? </span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>I think
+of it like this: Items are &quot;in-transit&quot; when the shipper accepts the
+delivery, and &quot;delivered&quot; to the destination starport shipping
+terminal when he redeeds his ship upon landing.</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>But if
+there's a better way to accomplish grief-free but productive shipping, I'm
+listening!</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>(Personally
+I'd rather players were able to stay in their ships in landing bays and do
+their commercial transfers from a shipping terminal aboard their ship, but
+we've probably flogged that dead horse enough at this point.)</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-left:.5in'><span style='font-size:10.0pt;
+font-family:Verdana'>AuleyDavyds wrote:<br>
+Should the crafter be able to see listings over all planets, and then purchase it,
+hence creating a contract for a player to move the goods from one location to
+another? </span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>I'd
+actually prefer to see something like that as an advanced skill in an
+Industrialist (or revamped Merchant) profession.</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-left:.5in'><span style='font-size:10.0pt;
+font-family:Verdana'>AuleyDavyds wrote:<br>
+The result for the shipper is a question, though: does he get a cut of the
+price the miner paid to the crafter, is there an increased fee (say add 10-15%
+depending on travel time and the danger of the route) added to the cost that
+the crafter pays, or are credits generated for the shipper, leaving the
+original contract as is? </span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>If it's
+player-generated, I'd say make shipping payments additional credits. The seller
+would have to factor the cost of shipping into his price for the goods he's
+trying to sell, but the point of player shipping is not to add money to the
+system but to spread it around more.</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>If OTOH
+we're talking NPC-generated freight shipping, then there'd probably need to be
+some function that calculates the delivery fee (AKA &quot;mission payout&quot;)
+based on the difficulty of reaching the destination terminal. (The cost of the
+item would actually be irrelevant, since as an NPC-generated item it wouldn't
+actually exist and therefore could not be purchased.)</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-left:.5in'><span style='font-size:10.0pt;
+font-family:Verdana'>AuleyDavyds wrote:<br>
+the important question is timing: Does the shipping occur before the sale (the
+miner asks to move stuff from Talus to Coronet in hopes that it will sell
+better there) or after (the example I gave above). </span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>As I
+replied to IgescaStorm above, only the owner of an item should ever be allowed
+to determine the disposition of that item.</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>So if I
+place an item for sale, I have to authorize delivery if it's OK for the item to
+be delivered someplace else before it's purchased.</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>However,
+if you place some item and then I buy it, it would be nice if I could pay to
+transfer that item (which I now own) to a shipping terminal for delivery to the
+starport closest to me.</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-left:.5in'><span style='font-size:10.0pt;
+font-family:Verdana'>MayRee wrote:<br>
+Maybe people who move frieght for the misisons could have a &quot;freighter
+rating&quot;. The Rating could be based on how many successful transport the
+person has completed. A low rating could get the freighter on the BH terminals
+(smuggler or not). A higher rating could get the freighter higher missions. </span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>Hmmm...
+that's an interesting idea. I like the way you've worked it up so that players
+have good information about who they might do business with.</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>The only
+concern I can think of is that this might wind up preventing lower-level
+freighter captains from competing with established players. I'm not suggesting
+that everyone should be &quot;equal&quot; -- that just eliminates any reason
+for entrepreneurial creativity -- but at the same time I wouldn't want the
+established players to get <i>all</i> the shipping business. That's the kind of
+mercantilist exclusivity that just inflates prices; we want to be sure to have
+commercial competition so that every freighter captain can fill a useful niche.</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>How can
+the rating system help achieve that goal?</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-left:.5in'><span style='font-size:10.0pt;
+font-family:Verdana'>mistermackey wrote:<br>
+jeez how did you think of all that stuff? </span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>ph34r my
+excessive free time. </span><span style='font-size:10.0pt;font-family:Wingdings'>J</span></p>
+
+</div>
+
+</body>
+
+</html>

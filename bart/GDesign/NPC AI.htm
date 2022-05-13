@@ -1,0 +1,238 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=Generator content="Microsoft Word 11 (filtered)">
+<title>NPC AI</title>
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:Verdana;
+	panose-1:2 11 6 4 3 5 4 4 2 4;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0in;
+	margin-bottom:.0001pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+p.MsoPlainText, li.MsoPlainText, div.MsoPlainText
+	{margin:0in;
+	margin-bottom:.0001pt;
+	font-size:10.0pt;
+	font-family:"Courier New";}
+@page Section1
+	{size:8.5in 11.0in;
+	margin:1.0in 65.95pt 1.0in 65.95pt;}
+div.Section1
+	{page:Section1;}
+ /* List Definitions */
+ ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+-->
+</style>
+
+</head>
+
+<body lang=EN-US>
+
+<div class=Section1>
+
+<p class=MsoNormal><b><span style='font-family:Verdana'>NPC AI</span></b></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>2006/01/25</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>What do
+NPCs amount to in most MMOGs?</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>1. Mobile
+loot bags. Pop them like piñatas! Repeat as long as you like.</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>2. Quest
+dispensers. Push the button, out drops a quest pellet.</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>3. City
+decorations. Because the appearance of life is close enough.</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>Personally,
+the impression I get is that developers, when pressured by the money people to
+justify the costs of creature AI and motion capture sessions for player
+character models, try to combine those two activities to claim that &quot;we'll
+have amazingly realistic non-player characters!&quot; You've got the humanoid
+walk cycles; you've got the mob AI... just slap on a coat of pre-scripted
+conversational paint and bingo! Perfectly acceptable NPCs.</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>Like I
+said, the technological side makes it tough to give NPCs plausibility. But it
+sure would be nice if someone gave it a serious try. Even if having
+&quot;smart&quot; NPCs limited the number that could exist in the world, that
+might be a tradeoff worth making.</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>Better to
+have a few reasonably sensible-acting NPCs than a world full of sheep-mobs in
+people clothing.</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<div class=MsoNormal align=center style='text-align:center'><span
+style='font-size:10.0pt;font-family:Verdana'>
+
+<hr size=2 width="100%" align=center>
+
+</span></div>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>It's not
+that I don't like NPCs in MMOGs -- I just expect more plausibly sapient
+behavior from something that looks like a sapient being. If NPCs can't act in a
+plausibly intelligent way, it might be better not to have them. An NPC that
+just stands there when a battle starts raging three feet away does more harm to
+a game world than it helps. It's just not plausible behavior.</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>Of course
+that word &quot;plausible&quot; is open to interpretation. :-)</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>There's
+been a lot of work done on game AI (by which I mean behavior, not pathfinding).
+Will Wright referenced this in a Powerpoint presentation he gave that used his
+upcoming Spore for examples. One of his points is that you can get plausibly
+intelligent behavior out of simple systems. It's not necessary to spend years
+and millions of dollars on an AI system for your game that brute-forces
+apparently intelligent behavior -- there are ways to do it that rely more on
+designing a simple system whose apparently complex outputs arise from internal
+state-transitions.</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>(Again,
+this isn't some recent breakthrough. John Conway was talking about it with his
+Game of Life for cellular automata back in the 1970s, and the alife people have
+been chattering about this approach to AI ever since.)</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>I'd say
+you could probably get the job done in a MMOG with three key features:</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<ul style='margin-top:0in' type=disc>
+ <li class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>The mob
+     can express a range of appropriate actions (fight, run, barter, converse,
+     etc.).</span></li>
+ <li class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>The mob
+     contains a few internal variables with multiple states.</span></li>
+ <li class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>There
+     are a few rules that define how states can change and which actions are
+     triggered for each state.</span></li>
+</ul>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>This is
+probably close to the system most MMOG designers already use for NPC AI, of course.
+The thing that puzzles me is why MMOG designers stop at just two or three state
+variables and only two states per variable -- that's where the power of this
+system resides! (Your homework assignment for today: &quot;deterministic finite
+automata&quot; from the Compiler Theory branch of Computer Science. Great
+stuff.)</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>At any
+rate, I'd like to see a little more effort put into NPCs. They don't have to
+act like players, but they do need to appear to have some plausible motivations
+and behaviors or they really hurt the believability of the game world.</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>Oh, and
+on the subject of &quot;memory&quot; of quest completions and so on: Yes, it's
+true that you don't have to actually store the memory of who completed a
+particular NPC's quest with the NPC. You can store it in the player's records
+in the database.</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>The thing
+is, &quot;completed quests&quot; probably get their own table, assuming the
+game uses a relational database. From the storage perspective, there's no
+difference between locating quest memory with an NPC or with a player -- the
+fact of completing an NPC's quest still gets stored somewhere. And that stuff
+adds up.</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>Which
+brings me to the larger point I was making (though not very well), which was
+that it's always easy to say, &quot;Hey, I just want to add this one new table
+for storing when players do [X].&quot; But every one of those tables gets
+multiplied (in the worst case, which you have to prepare for) by the number of
+players you have. Each individual new table (and the pointers to the records in
+those tables) adds up.</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>If a MMOG
+designer doesn't take a hard position on the creeping accumulation of new
+features that require more database storage, eventually it could start
+increasing your storage hardware costs... and if it really gets out of hand,
+you could wind up with performance problems.</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>So (I
+conclude) every new feature has to be considered not just for its coolness
+factor, but also for the storage cost (in addition to the development costs).
+If the value of the feature is clearly worth the cost, OK -- but that question
+has to be asked.</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<div class=MsoNormal align=center style='text-align:center'><span
+style='font-size:10.0pt;font-family:Verdana'>
+
+<hr size=2 width="100%" align=center>
+
+</span></div>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>If I seem
+like I'm contradicting myself here, I sort of am. On the one hand, I'm
+agitating for better NPC AI; on the other, I'm shaking my finger and warning
+against feature creep.</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>That's
+what happens when you wear both a player hat and a wannabe game designer hat.
+;-) </span></p>
+
+</div>
+
+</body>
+
+</html>

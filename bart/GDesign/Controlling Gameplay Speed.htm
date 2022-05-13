@@ -1,0 +1,212 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=Generator content="Microsoft Word 11 (filtered)">
+<title>Controlling Gameplay Speed</title>
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Verdana;
+	panose-1:2 11 6 4 3 5 4 4 2 4;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0in;
+	margin-bottom:.0001pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+p.MsoPlainText, li.MsoPlainText, div.MsoPlainText
+	{margin:0in;
+	margin-bottom:.0001pt;
+	font-size:10.0pt;
+	font-family:"Courier New";}
+@page Section1
+	{size:8.5in 11.0in;
+	margin:1.0in 65.95pt 1.0in 65.95pt;}
+div.Section1
+	{page:Section1;}
+-->
+</style>
+
+</head>
+
+<body lang=EN-US>
+
+<div class=Section1>
+
+<p class=MsoNormal><b><span style='font-family:Verdana'>Controlling Gameplay
+Speed</span></b></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>2006/05/11</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>How
+&quot;fast&quot; should gameplay go in a multiplayer game? Should it be like a
+first-person shooter? Or like a real-time strategy game? Or should it be
+turn-based like 4X games?</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>For me
+this choice isn't so much about what kind of game I'd want to emulate as it is
+about what kind of gameplay I'm trying to support.</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>At a high
+level like this, I find it useful to break down action using the old military
+model:</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><b><span style='font-size:10.0pt;font-family:Verdana'>Tactics</span></b></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'> short-term,
+small-unit actions in which the local environment can affect the outcome</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'> </span></p>
+
+<p class=MsoNormal><b><span style='font-size:10.0pt;font-family:Verdana'>Operations</span></b></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'> medium-term
+tactical engagements organized to achieve a regional objective</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'> </span></p>
+
+<p class=MsoNormal><b><span style='font-size:10.0pt;font-family:Verdana'>Strategy</span></b></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'> long-term
+operations organized and logistically supported to win a global conflict</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'> </span></p>
+
+<p class=MsoNormal><b><span style='font-size:10.0pt;font-family:Verdana'>Grand
+Strategy</span></b></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'> very-long-term
+strategic actions intended to make conflict unnecessary</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'> </span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>Where
+this helps the current discussion is in determining the time allowed for
+decision-making.</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>Tactical
+activity is more about the moment; it's a visceral, heart-pounding, adrenaline-pumping
+kind of thing. So tactical gameplay, to accurately reflect the level of this
+kind of activity, needs to use a model that presents problems and opportunities
+as a continuous flow -- in short, tactical action needs to be real-time to
+&quot;feel&quot; right.</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>Operational-
+and strategic-level gameplay, on the other hand, just aren't much fun when
+you're constantly being interrupted. So-called &quot;real-time strategy&quot;
+(RTS) games aren't strategic at all -- they're operational-level resource
+collection and expenditure games. You can slow time down a little to give
+orders to multiple units, but you can't really stop it. That doesn't mean these
+games aren't fun; it just means calling them &quot;strategy&quot; games is
+misleading.</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>For a
+truly strategic game, you need to have some reasonable amount of time to
+understand large-scale problems and devise solutions to them, which is why most
+actual strategy games (such as 4X games) are turn-based. They actually let you
+freeze time to do as much thinking as you like -- if you don't win, it won't be
+because an opponent jogged your elbow.</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>So what
+I'd like to see is the passage of time keyed to the current mode of gameplay.
+The bigger the problem you choose to consider, the more time you should have to
+solve it. In short:</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<table class=MsoTableGrid border=0 cellspacing=0 cellpadding=0
+ style='border-collapse:collapse'>
+ <tr>
+  <td width=95 valign=top style='width:71.6pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><b><span style='font-size:10.0pt;font-family:Verdana'>Tactical</span></b></p>
+  </td>
+  <td width=84 valign=top style='width:63.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>real-time</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=95 valign=top style='width:71.6pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><b><span style='font-size:10.0pt;font-family:Verdana'>Operational</span></b></p>
+  </td>
+  <td width=84 valign=top style='width:63.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>slow-time</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=95 valign=top style='width:71.6pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><b><span style='font-size:10.0pt;font-family:Verdana'>Strategic</span></b></p>
+  </td>
+  <td width=84 valign=top style='width:63.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>stop-time</span></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>If I'm
+playing a single character who gets jumped by someone with a knife, I should
+mostly be in real-time gameplay mode. You might let me slow that down slightly
+and occasionally (as in the &quot;bullet-time&quot; feature of F.E.A.R.), but
+tactical-level gameplay should mostly be real-time.</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>When I'm
+asked to go up a level, to make operational decisions about how to string
+together tactical actions to attain some regional objective for an
+organization, there should still be a sense of urgency but I need a little more
+time for good decision-making. At this level, I'd like to be able to slow time
+without actually stopping it -- maybe give me ten minutes (plus or minus five
+minutes or so) before the opportunity to make a decision ends.</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>And for
+strategic-level gameplay, I want to be able to pause time so that I can survey
+all the relevant high-level information, identify what's needed to move the
+current state toward my desired end-state, and develop a plan to accomplish
+that motion. In a persistent-world, multiplayer game, of course, you can't
+actually stop the game! But you can find ways to control the speed of large
+objects (whether physical objects or groups of people) so that players have
+hours or even days in which to make strategic decisions and set them in motion
+before the window of opportunity closes.</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>In
+summary, the speed of gameplay decision-making should be determined by the
+window through which the player is viewing gameplay. A personal-sized window
+should be real-time; an organization-sized window should be slow-time; and a
+world-sized window should be stop-time... or as close to it as you can get.</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>As usual,
+this kind of thing is easier to describe than to implement. :-)</span></p>
+
+</div>
+
+</body>
+
+</html>

@@ -1,0 +1,169 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=Generator content="Microsoft Word 11 (filtered)">
+<title>Mobs As Cellular Automata</title>
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Verdana;
+	panose-1:2 11 6 4 3 5 4 4 2 4;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0in;
+	margin-bottom:.0001pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+p.MsoPlainText, li.MsoPlainText, div.MsoPlainText
+	{margin:0in;
+	margin-bottom:.0001pt;
+	font-size:10.0pt;
+	font-family:"Courier New";}
+@page Section1
+	{size:8.5in 11.0in;
+	margin:1.0in 65.95pt 1.0in 65.95pt;}
+div.Section1
+	{page:Section1;}
+ /* List Definitions */
+ ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+-->
+</style>
+
+</head>
+
+<body lang=EN-US>
+
+<div class=Section1>
+
+<p class=MsoNormal><b><span style='font-family:Verdana'>Mobs As Cellular
+Automata</span></b></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>2006/02/06</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>The
+greatest weakness of &quot;mobile objects&quot; (mobs) such as creatures and
+NPCs these days seems to be the depth of their behaviors – that is, the lack of
+depth. So for a developer whose goal is increasing the dynamism of a game world
+through its actors, mob AI is probably the point of greatest payoff for effort
+invested.</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>Maybe
+looking at some of the details would shed some light on the scope of such an effort.
+(Is such an effort worth making? Separate question, addressed later. ;-)</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>First of
+all, mobs in the current batch of MMOGs already seem to be implemented as
+simple state machines. They just don't have many states:</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<ul style='margin-top:0in' type=disc>
+ <li class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>critter
+     mob behaviors: move, fight, flight (and maybe stalk)</span></li>
+ <li class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>NPC mob
+     behaviors: move, fight, converse, give quest/reward, trade</span></li>
+</ul>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>To
+generate more interesting behavior, it would probably be necessary to expand
+internal states (and transitions between states), available behaviors, and interactions
+among groups of mobs. It might also be interesting to allow social mobs to have
+roles.</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>Here are
+some possibilities for the behaviors of orcs in an orc camp:</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<ul style='margin-top:0in' type=disc>
+ <li class=MsoNormal><b><span style='font-size:10.0pt;font-family:Verdana'>internal
+     states</span></b><span style='font-size:10.0pt;font-family:Verdana'>:
+     curious, expansive, normal, alerted, panicked, defensive-group, defensive-self,
+     enraged, losing, terrified</span></li>
+ <li class=MsoNormal><b><span style='font-size:10.0pt;font-family:Verdana'>behaviors</span></b><span
+     style='font-size:10.0pt;font-family:Verdana'>: explore, build,
+     fiddle-with, fortify, broadcast-alert, defend-friend, defend-self,
+     attack-nearest-enemy, lay-traps-and-retreat, flee</span></li>
+ <li class=MsoNormal><b><span style='font-size:10.0pt;font-family:Verdana'>interactions</span></b><span
+     style='font-size:10.0pt;font-family:Verdana'>: send orc runners to other
+     allied orc camps (&quot;we're being attacked!&quot;), mass for
+     counterattack, counterattack nearest non-allied (orc or other enemy)
+     population center</span></li>
+ <li class=MsoNormal><b><span style='font-size:10.0pt;font-family:Verdana'>roles</span></b><span
+     style='font-size:10.0pt;font-family:Verdana'>: warrior, maintainer,
+     builder, communicator, leader</span></li>
+</ul>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>There are
+tools that could help design behavioral mechanics (I can't bring myself to call
+that AI, either), such as Deterministic Finite Automata graphs. I suppose these
+are already being used by some developers.</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>Even with
+such tools, however, implementing more complex mob behavior still carries some
+risks:</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<ul style='margin-top:0in' type=disc>
+ <li class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>feedback
+     loops -- positive feedback (in the technical sense) can be destructive</span></li>
+ <li class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>player
+     metagaming of complex systems</span></li>
+ <li class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>potentially
+     large storage requirements for retaining &quot;state&quot; for many mobs</span></li>
+ <li class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>potentially
+     significant processing power required for detecting state change conditions
+     for many mobs</span></li>
+</ul>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>Deciding
+whether to have more dynamic mob behavior has to take those potential costs
+into account as well. In particular, detecting state change conditions for many
+mobs could get really nasty. If your conditions aren't well-defined events on
+which triggers can be applied, then you have to poll for condition changes.
+That's usually bad news for performance.</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>Systems-level
+thinking is the only hope for making something like this work. I can't imagine
+successfully approaching it as an isolated game feature.</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>Finally,
+there's that pesky question of whether the current very Achiever-oriented
+population of gamers actually wants a more dynamic world in their game.
+&quot;Unwanted outcomes&quot; look good to Explorer-types like me, but someone
+whose satisfaction depends on having a controlled gameplay experience is not
+likely to agree.</span></p>
+
+</div>
+
+</body>
+
+</html>

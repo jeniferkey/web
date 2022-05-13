@@ -1,0 +1,174 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=Generator content="Microsoft Word 11 (filtered)">
+<title>Modular Architecture: A Redesign Proposal</title>
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Verdana;
+	panose-1:2 11 6 4 3 5 4 4 2 4;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0in;
+	margin-bottom:.0001pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+a:link, span.MsoHyperlink
+	{color:blue;
+	text-decoration:underline;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:navy;
+	text-decoration:underline;}
+@page Section1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.25in 1.0in 1.25in;}
+div.Section1
+	{page:Section1;}
+ /* List Definitions */
+ ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+-->
+</style>
+
+</head>
+
+<body lang=EN-US link=blue vlink=navy style='text-justify-trim:punctuation'>
+
+<div class=Section1>
+
+<p class=MsoNormal><b><span style='font-family:Verdana'>Modular Architecture: A
+Redesign Proposal</span></b></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'><a
+href="http://forums.station.sony.com/swg/board/message?board.id=architect&amp;message.id=49394">http://forums.station.sony.com/swg/board/message?board.id=architect&amp;message.id=49394</a></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>2004/03/05</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>If a MMOG
+offers an Architect profession, it needs to allow players to actually perform
+as architects. Just allowing them to crank out copy and copy of the same five
+or six house styles is not good enough. Players need actual building design
+capabilities to truly exercise the kinds of skills needed to do architecture.</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>I
+recognize that there are technical and other constraints that dictate building
+system designs. But I believe that a much more satisfying game experience --
+for both architects and the users of buildings -- could be had by offering a
+building construction system that allows variation in the layouts of actual
+buildings.</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>I'm not
+suggesting that we need something as freeform as the building construction
+system of The Sims (although that would certainly be appreciated!). I think a
+sufficiently dramatic improvement could be made by allowing modular
+construction.</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>That is,
+buildings should be constructed from numerous different types of room modules
+according to specific rules. This would allow variation in completed buildings
+while not excessively altering the necessary 3D geometry information that
+allows mobile objects to move through these buildings once they're constructed
+in the active game.</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>Examples
+of appropriate rules for the next-generation player building design tool are:</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<ul style='margin-top:0in' type=disc>
+ <li class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>every
+     module has a defined cost in resources and components</span></li>
+ <li class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>every
+     module has a defined number of items whose storage is supported</span></li>
+ <li class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>major
+     modules (big, tall, or special rooms) take up 1 lot</span></li>
+ <li class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>minor
+     modules cost 0 lots</span></li>
+ <li class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>stairway
+     modules cost 0 lots</span></li>
+ <li class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>buildings
+     are limited to 10 modules</span></li>
+ <li class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>only
+     one stairway module is permitted per building</span></li>
+ <li class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>modules
+     can only be connected to each other by connection points (openings or
+     doorways)</span></li>
+ <li class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>modules
+     may not be placed inside other modules (except for stairway modules)</span></li>
+ <li class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>modules
+     from different visual styles can't be mixed</span></li>
+ <li class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>buildings
+     must have a &quot;building type&quot; chosen (to set the correct structure
+     terminal)</span></li>
+ <li class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>a
+     building plan with more than one open connection (to the outside) will not
+     be approved</span></li>
+ <li class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>plans
+     for approved buildings may be saved in the datapad for reuse in the design
+     tool</span></li>
+ <li class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>the
+     final cost in resources/components of any plan is the sum of the costs for
+     all modules</span></li>
+ <li class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>the
+     final number of storable items is the sum of storage counts for all
+     modules</span></li>
+ <li class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>the
+     maintenance rate of a building is calculated from its final number of
+     storable items</span></li>
+ <li class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>an
+     isometric view of a building as it's being designed is visible to
+     potential customers</span></li>
+</ul>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>There are
+numerous other rules that would have to be enforced -- these are just a few I
+thought of to give you the flavor of how the design tool should work. (And
+frankly, not all of them may be necessary -- if the 3D code allows it, it might
+be fun to allow player buildings to have more than one exit point.)</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>Note that
+this more flexible design system usually already exists: the developers themselves
+have a general building design tool. It might be cheaper to modify this game
+development tool to an in-game design tool than to write an in-game modular
+building design tool from scratch. (Or it might not. The developer's building
+design tool may simply be a generic 3D modeling program, in which case an
+in-game building constructor could be a pretty complex thing to create.)</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>At any
+rate, this is the more open-ended and interesting kind of building design
+system I'd like to see in a MMOG. It would be a major boon to aspiring
+architects (who desperately need a way to differentiate their products and
+should enjoy the creative challenge), as well as to those who purchase homes
+and public buildings and want a unique and consistent &quot;look&quot; that
+doesn't exactly duplicate that of thousands of other players.</span></p>
+
+</div>
+
+</body>
+
+</html>

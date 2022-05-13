@@ -1,0 +1,141 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="content-type" content="application/xhtml+xml; charset=windows-1252" />
+    <title>Jumper Show-Miaren</title>
+    <style type="text/css"> 
+
+html, body{
+        padding: 0px;
+        margin: 20px;
+        background-image: url(back.gif);
+		font-family: Arial, Helvetica, sans-serif;
+		font-size: 2em;
+		font-weight:normal;
+}
+
+#Title {
+
+	margin-top: 17px;
+	text-align: center;
+
+}
+.container{
+  float: left;
+  clear: left;
+
+}
+
+.left {
+  float: left;
+  width: 1000px;
+  padding: 10px;
+  text-align: center;
+
+}
+
+.right {
+  float: right;
+  width: 1000px;
+  padding: 10px;
+  text-align:center;
+
+}
+
+img {
+	border: 2px solid;
+
+	padding: 1px;
+}
+
+</style> </head>
+  <body style="     font-size: 10pt"> 5/17/2014
+    <div id="Title" style="font-size: 14pt"> <span style="font-size:2em; font-weight:bold">Jumper
+        Show on Miaren<br />
+      </span>We entered the 3' division and had a lot of fun.<br />
+      I was a little nervous because the jumps looked bigger, but after the<br />
+      first fence Miaren made it clear that height was not a concern.<br />
+      We came away with a variety of ribbons and Reserve Champ for the division.<br />
+      I was most pleased that in the derby he didn't even look at the ditch and
+      sailed over.<br />
+      <br />
+    </div>
+    <div class="container">
+      <div class="left"> </div>
+      <div class="right"> <img src="01.jpg" alt="" /><br />
+        A fun day. The show photographer got some lovely pictures.</div>
+    </div>
+    <div class="container">
+      <div class="left" style="text-align: center"> <img src="02.jpg" alt="" /> <br />
+        Jumping the fences they didn't feel big, but looking at them they sure
+        looked it.</div>
+      <div class="right"> </div>
+    </div>
+    <div class="container">
+      <div class="left"> </div>
+      <div class="right"> <img src="03.jpg" alt="" /><br />
+        We had a couple of bad spots. This was the first one, but I held on and
+        didn't interfere and he got us over without hitting it.</div>
+    </div>
+    <div class="container">
+      <div class="left" style="text-align: center"> <img src="04.jpg" alt="" /> <br />
+        Landing and turning. I got a bit sloppy, but Miaren was in the game and
+        didn't hold it against me.</div>
+      <div class="right"> </div>
+    </div>
+    <div class="container">
+      <div class="left"> </div>
+      <div class="right"> <img src="05.jpg" alt="" /> <br />
+        The in and out always made me grin. He'd tend to get going too fast and
+        get too close to the last fence, but he was still careful each time.</div>
+    </div>
+    <div class="container">
+      <div class="left"> <img src="06.jpg" alt="" /> <br />
+        Watching for the lead when I should be looking for the next jump.</div>
+      <div class="right"> </div>
+    </div>
+    <div class="container">
+      <div class="left"> </div>
+      <div class="right"> <img src="07.jpg" alt="" /> <br />
+        When I did it correctly he got the lead and we ended up with good spots.</div>
+    </div>
+    <div class="container">
+      <div class="left"> <img src="08.jpg" alt="" /> <br />
+        On the derby course. We had one refusal out here, but we weren't the
+        only one at that particular fence. It was straight forward, but I guess
+        not to the horses.</div>
+      <div class="right"> </div>
+    </div>
+    <div class="container">
+      <div class="left"> </div>
+      <div class="right"> <img src="09.jpg" alt="" /> <br />
+        First fence on course. I'm riding better if our spot is good.</div>
+    </div>
+    <div class="container">
+      <div class="left"> <img src="10.jpg" alt="" /> <br />
+        We'd done a jumper show the weekend before that made this course feel
+        fun and easy.</div>
+      <div class="right"> </div>
+    </div>
+    <div class="container">
+      <div class="left"> </div>
+      <div class="right"> <img src="11.jpg" alt="" /> <br />
+        Telling him which lead to land on just by looking.</div>
+    </div>
+    <div class="container">
+      <div class="left"> <img src="12.jpg" alt="" /> <br />
+        This is what I'd like to fix. If he gets a short spot I still stand up
+        and get out of his way. I don't really bother him, but it's not the most
+        secure way to ride a fence.</div>
+      <div class="right"> </div>
+    </div>
+    <div class="container">
+      <div class="left"> </div>
+      <div class="right"> <img src="13.jpg" alt="" /> <br />
+        I was so pleased that for all the jumping I was able to stay back and
+        wait for him to jump. Not driving him to the fences, <br />
+        but not jumping ahead and interfering like I did when I was nervous at
+        Greenwood.</div>
+    </div>
+  </body>
+</html>

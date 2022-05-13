@@ -1,0 +1,934 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=us-ascii">
+<meta name=Generator content="Microsoft Word 11 (filtered)">
+<title>MIDDLE-EARTH MAGIC</title>
+
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Verdana;
+	panose-1:2 11 6 4 3 5 4 4 2 4;}
+@font-face
+	{font-family:Garamond;
+	panose-1:2 2 4 4 3 3 1 1 8 3;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0in;
+	margin-bottom:.0001pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+h1
+	{margin-right:0in;
+	margin-left:0in;
+	font-size:24.0pt;
+	font-family:"Times New Roman";
+	font-weight:bold;}
+h2
+	{margin-right:0in;
+	margin-left:0in;
+	font-size:18.0pt;
+	font-family:"Times New Roman";
+	font-weight:bold;}
+h3
+	{margin-right:0in;
+	margin-left:0in;
+	font-size:13.5pt;
+	font-family:"Times New Roman";
+	font-weight:bold;}
+h4
+	{margin-right:0in;
+	margin-left:0in;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	font-weight:bold;}
+p
+	{margin-right:0in;
+	margin-left:0in;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+code
+	{font-family:"Courier New";}
+pre
+	{margin:0in;
+	margin-bottom:.0001pt;
+	font-size:10.0pt;
+	font-family:"Courier New";}
+@page Section1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.25in 1.0in 1.25in;}
+div.Section1
+	{page:Section1;}
+-->
+</style>
+
+</head>
+
+<body lang=EN-US>
+
+<div class=Section1>
+
+<p class=MsoNormal align=center style='text-align:center'><b><span
+style='font-size:14.0pt;font-family:Verdana'>THE MAGIC OF MIDDLE-EARTH</span></b></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span
+style='font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span
+style='font-family:Verdana'>AN ANALYSIS OF SYSTEMS OF MAGIC, WITH APPLICATION
+TO TOLKIEN'S MIDDLE-EARTH AND MULTIPLAYER GAME DEVELOPMENT</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>December
+18, 1998</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><b><span style='font-size:11.0pt;font-family:Verdana'>I.
+INTRODUCTION</span></b></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-left:.5in'><span style='font-size:10.0pt;
+font-family:Verdana'>Fa&euml;rie itself may perhaps most nearly be translated
+by Magic--but it is magic of a peculiar mood and power, at the furthest pole
+from the vulgar devices of the laborious, scientific, magician.</span></p>
+
+<p class=MsoNormal style='margin-left:.5in'><span style='font-size:10.0pt;
+font-family:Verdana'>-- J.R.R. Tolkien, <i>On Fairy-Stories</i></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>In 1998
+there was an effort (ultimately canceled) to create a massively multiplayer
+online game based on J.R.R. Tolkien's Middle-Earth milieu.</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>In the
+process of reading the messages on the forum dedicated to that gane as it was
+being designed, I started wondering how &quot;magic&quot; as described by
+Tolkien could be translated into a feature of a massively multiplayer game.
+Just what did Tolkien mean by magical ability? What forms could Tolkien's
+conceptions of &quot;magic&quot; take in a MMOG? What restrictions or revisions
+might be necessary to make purely literary effects functional in a
+&quot;real&quot; game environment intended to simultaneously satisfy many
+players with very diverse expectations? </span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>Back in
+1993 I developed a system for categorizing different forms of magical ability
+as expressed in fantasy literature. (I've got the original essay on this
+particular subject stashed away; maybe I'll dust it off at some point.)
+Eventually it occured to me that it should be possible to analyze Tolkien's
+Middle-Earth according to this categorization system; maybe doing so would help
+in thinking about the high-level strategic implementation questions. </span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>This
+essay (updated slightly in early 2005) was the result. </span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><b><span style='font-size:11.0pt;font-family:Verdana'>II.
+THE FOUR FORMS</span></b></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>First,
+let me describe my four-fold categorization of magical ability. </span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>In this
+system, magic is classified first as being either innate to individuals, or
+else requiring material resources. That is, the source of power is either
+&quot;internal&quot; to the magic-user or &quot;external.&quot; </span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>Second,
+magic can be done either by all members of a society or race, or else the power
+is somehow restricted to only certain individuals within that society or race.
+In other words, the scope of control is either &quot;some&quot; or
+&quot;all.&quot; </span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>Considering
+these two aspects--the source of power, and the scope of control--leads to a 2
+x 2 matrix, and thus to four different styles of magical ability: </span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<div align=center>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0
+ style='border-collapse:collapse'>
+ <tr>
+  <td width=67 valign=top style='width:50.55pt;border:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+  </td>
+  <td width=81 valign=top style='width:61.05pt;border:solid windowtext 1.0pt;
+  border-left:none;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>Some</span></p>
+  </td>
+  <td width=79 valign=top style='width:59.0pt;border:solid windowtext 1.0pt;
+  border-left:none;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>All</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=67 valign=top style='width:50.55pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>Internal</span></p>
+  </td>
+  <td width=81 valign=top style='width:61.05pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><b><span style='font-size:10.0pt;font-family:Verdana'>Inherited</span></b></p>
+  </td>
+  <td width=79 valign=top style='width:59.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><b><span style='font-size:10.0pt;font-family:Verdana'>Innate</span></b></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=67 valign=top style='width:50.55pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>External</span></p>
+  </td>
+  <td width=81 valign=top style='width:61.05pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><b><span style='font-size:10.0pt;font-family:Verdana'>Owned</span></b></p>
+  </td>
+  <td width=79 valign=top style='width:59.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><b><span style='font-size:10.0pt;font-family:Verdana'>Learned</span></b></p>
+  </td>
+ </tr>
+</table>
+
+</div>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><b><span style='font-size:11.0pt;font-family:Verdana'>III.
+THE FOUR FORMS DESCRIBED</span></b></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><b><span style='font-size:10.0pt;font-family:Verdana'>A.
+Inherited</span></b></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>In the <b>Inherited</b>
+form, magic can be done only by some members of a society or race, and the
+ability is innate to those individuals.</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>The most
+obvious explanation of this is that the ability is genetic; that is, it is
+passed from parent to child. Two examples of this in fantasy literature are the
+&quot;Deryni&quot; books by Katherine Kurtz and the &quot;Sunrunner&quot; books
+by Melanie Rawn. </span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>Another
+way in which this ability could be transferred might be a form of &quot;laying
+on of hands.&quot; It would not be difficult to adapt this concept to the transference
+of magical ability, as long as the person transferring the ability must
+transfer all of it. (Otherwise this would lead eventually to either a few
+terrifically powerful individuals, or else to an entire society of individuals
+who have too little ability to accomplish much. While potentially interesting
+for a story, this wouldn't adapt well to a multiplayer gaming environment.) </span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>By either
+of these means, the ability to do magic is restricted to a few persons, and
+does not require any resources external to the practitioner. The crucial
+element is simply an act of will. </span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><b><span style='font-size:10.0pt;font-family:Verdana'>B.
+Innate</span></b></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>The <b>Innate</b>
+form of magical ability is similar to the <b>Inherited</b> form, with the
+difference that useful magical ability is available to all members of a society
+or race. </span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>As with <b>Inherited</b>
+magical ability, all that is required to perform <b>Innate</b> magic is an act
+of will. It may or may not require training to direct this force of will in a
+useful way, and some individuals are likely to have more willpower than others.
+Still, those who possess this innate ability will appear almost supernatural to
+other races or societies. To those with no innate magical abilities, an entire
+race of beings with such power will seem not so much to do magic as to <em><span
+style='font-family:Verdana'>be</span></em> magical. </span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>Among the
+somewhat rare examples in fantasy literature of this form of magic ability are
+Sheri S. Tepper's &quot;True Game&quot; books and Piers Anthony's stories of
+&quot;Xanth.&quot; </span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><b><span style='font-size:10.0pt;font-family:Verdana'>C.
+Owned</span></b></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>The <b>Owned</b>
+form of magical ability is so-called because the magic is invested in external
+objects or resources that must be possessed to be used. </span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>In this
+kind of setting, members of the society or race of interest don't actually
+&quot;do&quot; magic themselves, but instead use magical items that occur
+naturally or are created by others. This is typically the format of the
+&quot;heros.&quot; With no innate powers of their own, they must find magical
+objects, gain access to them, learn how to use them, and protect them from
+being taken by someone else. </span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>This
+format is often of interest to writers because obvious conflicts arise from it.
+For example, what happens to an ordinary person who suddenly becomes the owner
+of a powerful magical artifact? How is this person changed by power?
+Furthermore, becoming accustomed to wielding power automatically creates the threat
+of losing that power, and threats drive plot. </span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>(Additionally,
+game developers find this kind of magic relatively easy to implement. This is
+even more so with the advent of C++, in which magical objects can be
+implemented as... well, as objects!) </span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>Magical
+devices have been described for centuries, precisely because of the strength of
+the notion of conferring power on the weak. Examples of such devices are flying
+carpets, cornucopia, enchanted arms and armor, and any number of rings, cloaks,
+helms, amulets, potions and scrolls. </span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>Naturally,
+stories which use this kind of magic are legion. Examples include &quot;Jack
+and the Beanstalk&quot; (magic beans), the Nibelungenlied (finalized in
+Wagner's Ring cycle, complete with dwarves, a dragon, a cursed ring, and a
+broken sword made whole again), the Arthurian cycle (Excalibur), and even the
+the rings in Thorne Smith's <i>The Night Life of the Gods</i> which could turn
+people into statues (and vice-versa). </span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><b><span style='font-size:10.0pt;font-family:Verdana'>D.
+Learned</span></b></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>In a way,
+this is the most mundane of all the forms of magical ability. Here, magic, once
+<b>Learned</b>, can be performed by anyone--all that is needed is the
+appropriate knowledge. This is one case where knowledge really does equal
+power. </span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>In such a
+world, magic is treated like we treat science. It is analyzed by theoreticians,
+codified into Laws and Rules and Doctrines, and applied by skilled
+practitioners... often for money. It is, in short, just one craft among many. </span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>This is
+not to say that some individuals won't have more skill or interest in the craft
+of magic than others. For example, anyone in our world who wishes to do so and
+has access to teachers may study computer programming. But not everyone cares
+to do so, nor does everyone have equal native talent at it. </span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>So it is
+in the kind of fantasy world that has &quot;Colleges of Magic.&quot; Those
+characters who devote themselves to learning magic and are good at it may be
+treated with great respect and even awe, as in Ursula K. Le Guin's
+&quot;Earthsea&quot; stories. On the other hand, just as some computing
+professionals are regarded as geeks for their single-minded dedication to
+mastering their craft, it's no stretch to imagine wizards who lack a few social
+graces (and who manage to blow themselves up regularly) as in Terry Pratchett's
+&quot;Discworld&quot; books. </span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>However
+its practitioners are regarded, the essential distinction of this kind of
+magical ability is that one's power is directly proportional to one's
+knowledge. This can be played for laughs... but it's also the basis of Mary
+Shelley's <i>Frankenstein</i> (and any number of lame '50s sci-fi/monster
+movies) in which the lust for knowledge unrestrained by humility leads to
+disaster. &quot;There are some things Man was never meant to know.&quot; </span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><b><span style='font-size:11.0pt;font-family:Verdana'>IV.
+APPLICATION TO MIDDLE-EARTH</span></b></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>So how do
+these categories apply to Professor Tolkien's Middle-Earth? </span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>By my
+reckoning Tolkien actually used several of the different styles of magical
+ability I've described. Each of the different races--including the debased and
+evil races that use magic--fits into one of the four categories given above.
+(There is one special exception: a kind of magic that appears to be available
+to all the races of Middle-Earth, which I will describe later.) </span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><b><span style='font-size:10.0pt;font-family:Verdana'>A. Men
+and Hobbits (and Orcs and Trolls and Goblins, etc.)</span></b></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>As a general
+rule, Men and Hobbits and members of &quot;lesser&quot; races have no innate
+magical ability of their own. Additionally, while they may be able to learn
+craft secrets or other lore, they appear to lack the power to apply that
+knowledge (as the wizards could). Thus, they can use only <b>Owned</b> magic
+(the kind embedded in magical items). </span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>For
+example, Bilbo and Frodo could become invisible only by using the Great Ring;
+they protected themselves with the shirt of <i>mithril</i>; they attacked with
+the enchanted dagger Sting. Samwise could not summon light himself; he required
+Galadriel's phial. (Tolkien, in fact, seems to have made a point of describing
+Hobbits as far too sensible to bother with that &quot;magic&quot; stuff. This
+is what makes Sam's gradual acceptance of magic some of the most fascinating
+writing in all of LOTR.) </span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>Similarly,
+Boromir and other Men did no learned or innate magic themselves. (Aragorn is a
+special case, as considered below.) Unlike Hobbits, whom Tolkien portrayed as
+not using magic simply because they had no use for it, Tolkien seemed to have a
+somewhat less benign view of Man. As I read it, Men did not do magic because
+they lacked the necessary greatness of spirit. A very few great-hearted Men
+might possess one extremely limited magical ability (such as that of the
+Beornings), and one or two other Men might have a special gift to inspire
+others as a genetic inheritance from L&uacute;thien, but in general Men are
+crude iron to Elvish silver and gold. </span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>Men, like
+Hobbits, could and did use items that might be enchanted, such as the
+Dragon-Helm of Hador, the reforged Narsil, and perhaps even Boromir's horn. But
+the Elvish power to alter reality as an act of will was not among the gifts
+given to Man. </span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><b><span style='font-size:10.0pt;font-family:Verdana'>B.
+Dwarves</span></b></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>Dwarves
+are a puzzle. They seem, according to the majority of Tolkien's work concerning
+them, to have rejected magic almost completely. Dwarves are consistently
+described as having great skill in the fashioning of things, an affinity for
+caves, a potential for avarice, and very touchy senses of honor (with long
+memories where their honor is concerned)... but in all of this, Tolkien shows
+us no scenes of Dwarves doing magic. It is thus easy to conclude that Dwarves,
+like Men and Hobbits, were purely mundane, and that any appearance of magical
+ability in them is due to their unsurpassed craft. </span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>For
+example, while Gandalf has a conversation with Gimli before the locked door of
+Moria concerning dwarven craft, what the Dwarves do is not explicitly described
+by Tolkien as &quot;magical.&quot; Gandalf speaks of Dwarven doors that open at
+certain times or for certain individuals, or by speaking certain words such as
+those of the secret Dwarf-speech, but none of these things are necessarily
+magical. It's not unreasonable to ascribe them to great craft, such as that
+used to create the secret entrance to Mt. Erebor: &quot;...the setting sun with
+the last light of Durin's Day will shine upon the keyhole.&quot; </span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>But this
+mundane appearance may be deceiving. Although Tolkien (to my knowledge) never
+directly shows Dwarves doing what he portrays as magic, or even using magical
+items, there are a few off-stage references to both of these. </span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>There is
+the acceptance by the Dwarf-lords of the seven Rings forged for them by the
+elven-smiths of Eregion. Although this might be explained away as a matter of
+the Dwarvish instinct to hoard valuable things, Sauron could only have
+entrapped the wearers if they had worn the seven rings and used their powers. </span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>A
+somewhat clearer example of Dwarven magic use is the work of the great smith,
+Telchar of Nogrod. For one thing, Telchar forged the Helm of Hador. As Tolkien
+says of this, &quot;...on it were graven runes of victory. A power was in it
+that guarded any who wore it from wound or death, for the sword that hewed it
+was broken, and the dart that smote it sprang aside.&quot; For another example,
+Telchar forged Narsil, the blade reforged for Aragorn as And&uacute;ril. </span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>A
+reasonable argument could be made that the &quot;magical&quot; appearance of
+these items was merely due to their having been made with an almost miraculous
+level of skill. (I held to just this argument for some time.) But an equally
+reasonable reading of Tolkien suggests that he intended for these items to be
+regarded as possessing magical powers. </span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>What finally
+tipped the balance for me in accepting that some Dwarves could indeed do magic
+(if only the limited kind of imbuing artifacts with special virtues) was the
+Unexpected Party at Bag End in <i>The Hobbit</i>. When Thorin Oakenshield and
+the other twelve Dwarves are introduced to Bilbo through Gandalf's guile, they
+sing a song which includes the verse: </span></p>
+
+<p class=MsoNormal><code><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></code></p>
+
+<p class=MsoNormal style='margin-left:.5in'><code><span style='font-size:10.0pt;
+font-family:Garamond'>The dwarves of yore made mighty spells</span></code></p>
+
+<p class=MsoNormal style='margin-left:.5in'><code><span style='font-size:10.0pt;
+font-family:Garamond'>While hammers fell like ringing bells</span></code></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>And if
+that's not clear enough, Tolkien immediately follows this song by stating that
+Bilbo &quot;...felt the love of beautiful things made by hands and by cunning
+and by magic moving through him...&quot; </span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>Was this
+merely a bit of poetic license on Tolkien's part? After all, <i>The Hobbit</i>
+is widely considered a rather lightweight bit of whimsy, not really
+&quot;canon&quot; like <i>The Silmarillion</i> or <i>Narn i H&icirc;n
+H&uacute;rin</i>. But I believe that this should be taken just as Prof. Tolkien
+stated it--as evidence (not conclusive, perhaps, but supportive) that some
+Dwarves could indeed perform a kind of magic. </span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>Still,
+perhaps this was merely an unintended artifact of Tolkien's story-telling.
+Given the many years in which Tolkien's tale &quot;grew in the telling,&quot;
+it should not be surprising that perfect consistency was impossible, not to
+mention subsidiary to literary considerations. And yet, there it is. Tolkien
+said that Dwarves cast spells; they did magic. Do we toss aside these
+statements simply because they appear in <i>The Hobbit</i>? How can we ignore
+them (because they inconveniently do not fit a theory) without casting doubt on
+so many other questions? </span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>I think
+we can't. So, considering all the evidence as fairly as I can, I'm prepared to
+say that, while most Dwarves never did anything magical nor desired to do so, a
+very few of the most learned and skillful Dwarves could perform feats of
+craftsmanship indistiguishable from magic. </span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>Call it
+the &quot;Clarke Hypothesis&quot; of Dwarven magic. </span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><b><span style='font-size:10.0pt;font-family:Verdana'>C.
+Elves</span></b></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>The Elves
+are a different matter. Unlike Men and Hobbits, who have only <b>Owned</b>
+ability, and Dwarves, who have only a limited form of <b>Learned</b> magical
+ability, I classify Elves as having the <b>Innate</b> magical ability. (The
+Ents and Tom Bombadil probably also fit into this category.) </span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>For the
+Elves, magic is clearly an act of will. While immense will may be necessary for
+magics beyond simple illusion, the essential ability to do such magic appears
+to be available to all Elves described by Tolkien. In this, they are akin to
+the Valar--and even to Eru, the One--in that all that is necessary for a thing
+to happen is that it be willed strongly enough. Just as Il&uacute;vatar made
+the world, and the Valar (and Melkor) shaped it, the Elves are able to alter
+the physical world in accordance with their desires. While those Elves who saw
+the light of the Two Trees were among the most powerful, even the Green-elves
+of Ossiriand and the Wood-elves of Mirkwood had access to this power simply by
+virtue of being Elves. </span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>With one
+exception, the Elves relied on this innate force of will to work their wonders,
+rather than on using magical items or on special knowledge. The exception is
+the tribe of the Noldor in general, and F&euml;anor, Curufin, and Celebrimbor
+specifically. (In addition, Galadriel, herself a Noldo, gets into the business
+of making artifacts, as in the shining glass she gives to Frodo.) Even Professor
+Tolkien seems a bit puzzled as to why these Elves delighted in the making of
+things which required great craft and skill; in several passages he suggests
+that other Elves considered the Noldor a bit odd. (And of course there was that
+bit of nastiness at Alqualond&euml; to further set them apart.) </span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>Still,
+Tolkien makes it clear that these Elves were the exceptions, not the rule.
+While the Noldor (particularly the children of F&euml;anor) had a special gift of
+craft, what set the Firstborn apart from all the other races was their burning
+spirit that could make what was willed real. In fact, this instinctive magical
+ability common to all Elves was required for the making of the Silmarils and
+the Rings of Power by particularly skilled Noldorin Elves. So it seems fair to
+suppose that the Elves are best described as using the <b>Innate</b> kind of
+magic. </span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>There is,
+I should add, an alternate explanation. It may be that the power of Light magic
+is not innate to Elves, but is instead divine power of the Valar that may be
+loaned to Elves upon request. Perhaps the apparent ability of the Elves to use
+this kind of magic &quot;on demand&quot; is because the Valar can better hear
+the great-spirited Firstborn than any of the other races of Middle-Earth.
+Practically, however, the results are the same: Elves can <b>Innate</b>ly do
+magic. </span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><b><span style='font-size:10.0pt;font-family:Verdana'>D.
+Wizards</span></b></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>And then
+there are the Istari--the wizards. Unlike the other races, Gandalf, Saruman, Radagast
+and the others seem to gain their powers (and their relative positions in the
+wizardly hierarchy) by the development and exercise of craft and skill--in a
+word, through what is <b>Learned</b>. </span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>Lin
+Carter (in <i>Tolkien: A Look Behind the Lord of the Rings</i>) observes that
+Tolkien may have based the character of Gandalf on the Norse All-Father, Odin.
+Where this becomes interesting is when it is recalled that much of Odin's power
+was described as being due to his vast knowledge. In one story, Odin trades an eye
+for a drink at the giant Mimir's well, but in so doing, he acquires wisdom.
+Odin was also said to have had two great ravens, Hugin and Munin
+(&quot;Thought&quot; and &quot;Memory&quot;), who would fly off into the world
+and return with secrets. </span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>Some of
+this seems to fit Gandalf and the other wizards pretty closely. Radagast the
+Brown, for example, gets information from his friends in the animal kingdom.
+And just as Odin's wisdom was bought through the pain of losing an eye, the
+power of Gandalf grew the greater through the pain of his grappling with the
+Balrog. </span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>If
+another clue is needed, consider: one of the names given to Saruman was
+&quot;Curun&iacute;r&quot;--the Man of Skill. The root &quot;curu-&quot; or
+&quot;skill&quot; is also found in the place-name &quot;Nan
+Curun&iacute;r,&quot; or &quot;Wizard's Vale.&quot; </span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>Taking all
+these things into account, Tolkien's wizards appear to be best described as
+using the <b>Learned</b> style of magical ability. (This raises the related
+questions: &quot;What did they learn?&quot; and &quot;How did they apply this
+knowledge?&quot; But Tolkien offers no answers to these questions.) </span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><b><span style='font-size:10.0pt;font-family:Verdana'>E. An
+Exceptional Magic?</span></b></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>I
+suggested earlier that there may be a special kind of magic available to all
+the inhabitants of Middle-Earth. Specifically, members of any race, in extreme
+situations, may to be able to invoke the powers of light (the Valar?) to defy
+the forces of darkness. </span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>At
+various points in Professor Tolkien's long history of Middle-Earth, several
+characters in desperate circumstances cry out in supplication. In most cases,
+when granted this aid is not tangible, but rather is no more--and no less--than
+a bit of extra strength with which to resist yielding to despair. And in a few
+cases, this aid does take the somewhat tangible form of light. </span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>It might
+seem to be a bit of a stretch to call these apparent interventions &quot;magic,&quot;
+but that is how Tolkien uses them. When the words &quot;Gilthoniel, A
+Elbereth!&quot; come unbidden to the mind of a hobbit as earthy and sensible as
+Sam Gamgee, and an oppressive force of evil retreats at those words (the
+Watchers at the Tower of Cirith Ungol), it's reasonable to accept that Tolkien
+intended this to be understood as magical. </span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>Although
+to my current knowledge Tolkien does not show any explicit examples of Men or
+Dwarves using this kind of magic, he doesn't state that it is denied to them. Suggestions
+that certain Men might have access to a kind of natural magical power may be
+found in Aragorn's healing ability, or his calling up and commanding the Shadow
+Host from the Paths of the Dead. But there is a more likely reason: Aragorn's
+power, like his noble bearing, may have been a gift to the descendants of
+L&uacute;thien Tin&uacute;viel through his ancestor Elros, who although
+Halfelven chose to become mortal. Further support for this interpretation comes
+when Tolkien, during the Mouth of Sauron's conversation with Aragorn before the
+Black Gate, mentions that &quot;Black N&uacute;men&oacute;reans&quot; also
+descended from L&uacute;thien were &quot;enamoured of evil knowledge.&quot; And
+this Messenger himself is said to have &quot;learned great sorcery.&quot; </span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>(If this
+notion is accepted, it may be that the descendants of Elros have a limited form
+of the fourth kind of magical ability, that which is <b>Inherited</b>. Given
+Tolkien's description of the waning of the D&uacute;nedain, the genes
+responsible for this kind of magical ability are apparently recessive. So we
+might as well assume that this kind of magic is not available to the current
+inhabitants of Middle-Earth in the Fourth Age.) </span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>This
+apparent contradiction in the magical abilities of Men might be explained if
+Tolkien used the term &quot;sorcery&quot; to refer to power exercised by craft
+(reserved generally to the Istari and in a specific form to the most skillful
+Dwarves), and the word &quot;magic&quot; to refer to power derived from
+invoking the names of the Valar and those beloved by them. I'm not familiar
+with any such explicit differentiation by Tolkien, but perhaps someone else can
+shed some light on this notion. </span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>Generally,
+though, even if Men and Hobbits were thought by Tolkien to have the ability to
+invoke a feeling of Good in desperate straits or to learn dark sorceries,
+Tolkien seems to have preferred that individual members of these two races live
+or die on their own without doing innate magic. They might use magical items,
+but the special gift of innate magical ability was, except in extremely limited
+cases, denied them. </span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>It's
+worth noting that even Beren, T&uacute;rin and Tuor lived, fought and died
+without ever using any innate or invoked magical power. </span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><b><span style='font-size:11.0pt;font-family:Verdana'>V.
+IMPLICATIONS</span></b></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>Assuming
+these conclusions are reasonable, what are the implications for building a massively
+multiplayer game around them? </span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>The bad
+news is that a massively multiplayer gaming environment based on Tolkien's
+Middle-Earth cannot offer players a wide range of magical abilities and still
+remain true to Tolkien's vision of the strengths and weaknesses of the various
+races. </span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>The
+foremost practitioners of what we commonly recognize as &quot;magic&quot; were
+the wizards. But the developers of the on-line version of Middle-Earth have
+already stated that players will not be allowed to be wizards as described by
+Tolkien. So either major-league spell-casting is out, or the developers will
+have to alter Professor Tolkien's vision to a significant degree. </span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>This goes
+deeper than the obvious question of whether players can be allowed to be
+wizards or not. Not only did Tolkien restrict to the wizards the magical
+ability that we think of as spell-casting, but he explicitly portrayed
+Middle-Earth as a world in which magic was fading. The Ainur descended into the
+world to become the Valar and Maiar, the Valar and Maiar gave way to the Eldar,
+and the Eldar left the world to Men. Even evil waned in grandeur as Melkor
+became Morgoth, and was replaced by his still-less-noble lieutenant, Sauron.
+And the Third Age ended with the unmaking of the Great Ring and the passing
+from the world of the three Elven Rings and their bearers (including Galadriel,
+the last Elf in the living world to have seen the light of the Two Trees). In
+their passing, they took with them the last great magics of Middle-Earth. </span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>To now
+reintroduce strong magic to Middle-Earth for no other reason than because
+paying customers want to cast spells would run completely counter to Tolkien's
+view of his world as consistently becoming more mundane over time. There may be
+valid Real World economic reasons for computer game developers to make such a
+fundamental change. But it is fair to point out that doing so would contradict
+the stated intention of the designers to hew as closely as possible to
+Middle-Earth as imagined by Tolkien. </span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>This is
+not the only potential problem concerning magic use. Unless Tolkien's concepts
+of racial gifts are radically altered, those races whose members generally have
+no natural ability to do magic--Men, Hobbits, and Dwarves--will gain the use of
+magic only if new kinds of magic undescribed by Tolkien are invented and
+introduced (alchemy, for example), or if the landscape is littered with
+hitherto-unknown caches of Elven magical items. (Maybe the barrow-wights are
+breeding.) </span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>Otherwise,
+the only race that will be able to do magic will be the local Wood-elves, and
+even they will be limited to their innate magical resistance to forces of
+darkness. This would mean that they'd be great to have in a party that
+encounters some form of evil, but against some natural danger (a bear, for example)
+they would have no special magic to contribute beyond innate physical
+abilities. Someone playing an Elf would be limited in most situations to
+wielding a sword or firing arrows as little more than a slightly more effective
+version of any mundane Man or Dwarf or Hobbit. </span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>And
+because the last of the Noldor will have left, even the skillful crafting of
+magical items will be very limited. Following Tolkien's hints, by the Fourth
+Age it wouldn't even be possible to do magic in non-combat settings (which in
+most MMOGs accounts for significant playing time). </span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><b><span style='font-size:11.0pt;font-family:Verdana'>VI.
+CONCLUSIONS</span></b></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>If we can
+suppose that the <b>Inherited</b> form of magical ability existed among at
+least some of the D&uacute;nedain, it would likely be essentially extinct by
+the beginning of the Fourth Age. Even if possible in Tolkien's literary world,
+however, it likely would not be permitted to game players, since if it were
+possible, everyone who played a human would claim descent from N&uacute;menor.
+It's more likely and more reasonable to give human players access to the <b>Owned</b>
+ability that comes from using magical items, and provide a sufficient number
+and kind of such items to motivate good gameplay. </span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>Meanwhile,
+Elves (and possibly some player classes/professions) would have some limited
+access to the <b>Innate</b> form of magic. It's possible that human players
+could be allowed access to <b>Learned</b> magic, as this would leave Elves in
+sole possession of <b>Innate</b> magic without denying those playing human
+characters the opportunity to &quot;do magic.&quot; But to do so would run counter
+to Tolkien's conception of &quot;magic&quot; (in the form of Fa&euml;rie)
+leaving Middle-Earth at the end of the Third Age. </span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>The
+result of all this is that to create a massively multiplayer game based on
+Middle-Earth that allows players to do interesting magic will require either
+severe modifications of Middle-Earth as Tolkien created it, or severe limits on
+gameplay to preserve Tolkien's vision of the peoples and places and events of
+Middle-Earth. </span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>Both
+choices are perilous. If you alter the well-known racial abilities and social
+demographics of the peoples of Middle-Earth at the start of the Fourth Age, you
+will be rewriting Tolkien in ways of which Tolkien would certainly not have
+approved, and to which the many fans of the original story will certainly object,
+possibly by not playing. Otherwise, the game will have to be set at some time
+prior to the end of the Third Age, in which case you won't have certain key
+figures from LOTR available as NPCs -- even worse, you'll have to design the
+game so that players are prevented from making a meaningful impact on the game
+world as that could change the whole history of Middle-Earth). Either way, you
+run a high risk of alienating a large group of potential players. </span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>Ultimately,
+the question is whether the alterations necessary to make a fun game of a
+unique literary milieu will have to be so significant that the beauty and joy
+and hope found in Tolkien's work are expunged in favor of levelling up by
+killing orcs. </span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>-- Bart
+Stewart </span></p>
+
+</div>
+
+</body>
+
+</html>

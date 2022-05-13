@@ -1,0 +1,339 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=Generator content="Microsoft Word 11 (filtered)">
+<title>Non-Player Mob AI, Part 2</title>
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Verdana;
+	panose-1:2 11 6 4 3 5 4 4 2 4;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0in;
+	margin-bottom:.0001pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+@page Section1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.25in 1.0in 1.25in;}
+div.Section1
+	{page:Section1;}
+-->
+</style>
+
+</head>
+
+<body lang=EN-US>
+
+<div class=Section1>
+
+<p class=MsoNormal><b><span style='font-family:Verdana'>Non-Player Mob AI, Part 2</span></b></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>2006/06/28</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>The
+bottom line problem with non-player mob (that is, NPC and creature) AI is that
+it's reactive, not active. NPCs and critters are either loot bags waiting to be
+popped or mindless quest dispensers. They don't act; they exist only to be
+acted upon.</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>To some
+degree, that's how it has to be. Those are functions players want NPCs/critters
+to have, so that's what developers give them. Except that developers stop
+there. But why stop there?</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>Well,
+partly it's because there are only so many hours in a day, even if you work
+programmers like galley slaves. (Something that courts are beginning to take a
+dim view of.) Stop for a second and ask yourself: How many important systems
+are there in a major MMORPG?</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>Go ahead,
+come up with a number.</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>Now
+multiply that number by 10, and you'll start to be in the ballpark of how many
+systems there really are that somebody has to design, implement, and test. (And
+you can easily double or triple that number if you also take into account
+server code, behind-the-scenes &quot;helper&quot; systems, and tool
+development.)</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>With so
+much to do that absolutely has to get done, I'm sympathetic to not implementing
+super-AI. &quot;Minimally plausible&quot; starts looking like a more
+appropriate goal.</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>It's also
+the case that you don't necessarily want your mobs doing things when there's
+not a player there to be affected by those behaviors -- that can be perceived
+as a waste of processor cycles. (Do you want <i>more</i> lag?)</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>Finally,
+there's the argument that despite what some of them may say, most players don't
+actually want mobs that are smart enough to wipe the floor with them. The
+highly gameplay-oriented players -- to whom most MMORPG developers cater
+slavishly -- want mobs they can beat so that they can take their stuff.
+(Actually, that applies to PvP as well, but that's another thread.) Making mobs
+smart enough to run away or gang up on a player might wind up being very
+unpopular with many of today's gamers.</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>And
+yet... what a waste of good mobs. If a MMORPG is a game world, then shouldn't
+&quot;world&quot; be roughly as important as &quot;game?&quot; In which case,
+shouldn't mobs be designed to support the goal of making the gameworld feel
+like a living, breathing, dynamic place?</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>Bearing
+in mind all the objections, I think the answer to that (as the editorialist
+said) has to be &quot;yes.&quot; To make the gameworld as dynamic as it should
+be to make it feel &quot;alive,&quot; mobs need to be more than loot bags and
+quest dispensers. Instead of just existing to be acted upon, they need (to some
+degree) to be independent actors themselves.</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>I believe
+that accomplishing this will require non-player mob AI to improve in at least
+four specific categories: agenda, environment, communication, and ecology.</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>AGENDA</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>Agenda is
+easy to describe, but hard to implement: mobs need to have goals and desires
+and interests, and then (according to their level of intelligence) should be
+able to devise and carry out plans that will plausibly allow them to achieve
+their goals.</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>In some
+cases, that will mean that they do exactly what they do right now: stand around
+and wait to be activated by a player. Maybe they're in &quot;guard&quot; mode,
+which means patrolling a certain area to protect something (shops if they're
+NPCs, babies if they're critters). Maybe they're just lazy and don't have a
+job. Maybe they're injured, or lost. There are plenty of reasons why some mobs
+could do exactly what they do now; the differences would be that there's a
+plausible reason why they're doing it, and other mobs are capable of doing
+something else because now they have a reason for that.</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>Being
+able to form and carry out plans -- in other words, having an agenda -- along
+with the subsidiary capability of being able to describe this agenda to players
+who ask would tell players that they are part of a world that has a life of its
+own. Creatures would seek to feed and breed. NPCs would have player-like
+aspirations that they, like players, would attempt to fulfill.</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>Not being
+at the center of the universe could be a shock to some players... but there
+are, I think, a lot of other players who would feel much more satisfied to be
+playing in a gameworld where even the mobs have interesting stories to tell.</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>ENVIRONMENT</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>Why is it
+that I can unleash electric death on an NPC and another NPC who is three feet
+away -- who belongs to the same faction as the first NPC -- will simply
+continue lounging against the wall?</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>How can
+that some creature can detect me from a hundred feet away when I'm behind a
+tree, at night, wearing all black, downwind and masking my scent, and not
+moving?</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>I cannot
+think of a single MMORPG that implements the gameworld as a place where the
+various emissions of the electromagnetic spectrum are used to any serious
+degree. Most games let their mobs do simple A* pathfinding around collidable
+obstacles. Some games give you line-of-sight. A few games allow terrain or
+character position (standing/crouching/prone) to matter. But how many really
+incorporate sound? Smell? Environmentally-appropriate camouflage? Reduction in
+visibility due to darkness/rain/dust/fog/smoke? UV or IR detection/masking? Heat
+or power signature detection/masking? Weight/mass detection (as for
+pressure-sensitive switches)?</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>Can you
+imagine a game where mobs could detect and recognize other mobs (including
+players) through all these environmental cues, and could incorporate that
+information into their agendas?</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>Creatures
+could stalk their prey, and prey could use various means (natural,
+technological, magical, whatever) to avoid or break detection by predators.
+NPCs could see or hear when their allies are being attacked and run to the
+rescue. Mobs in general would become able to interact with each other and with
+players in a vastly more plausible way because they would finally have access
+to the same kind of environmental information that we as players take for
+granted when we’re deciding what to do.</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>COMMUNICATION</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>Some mobs
+are social. While individuals, they are also members of a group or groups.
+Accordingly, these mobs ought to be able to communicate information to and
+among each other.</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>A mob who
+enters a &quot;danger&quot; or &quot;opportunity&quot; state ought to be able
+to transmit that information to other mobs who could benefit from the
+knowledge.</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>When a
+creature makes a kill, why can't he alert his packmates to come share in the
+bounty when doing so helps to insure the group's survival? When an NPC sees an
+enemy force coming over the town walls, why can't she race to the watchtower to
+ring the warning bell, then run through the town calling for all allied NPCs
+(and players!) to help repel the invaders?</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>A decent
+level of communication capability would allow mobs to share these kinds of
+useful information. Rather than acting purely independently, they would be able
+to act together as a group. And that would finally allow mobs to effectively
+match the ability of players to act in a coordinated way.</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>Which
+brings me to:</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>ECOLOGY</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>Why is it
+that I can whack the same mob eight zillion times, and he will respawn in
+roughly the same place to allow himself to be whacked for eight zillion more
+times? Why is it that I can wipe out an entire zoneful of orcs, and they'll
+just reform in the same place as soon as I turn my back so I can wipe them out
+again? How come I and other players can all take the same quest from the same
+NPC for weeks at a time and he never learns to recognize us?</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>Here's an
+answer: Player actions have no long-term consequences because mobs have no
+long-term memory or social decision-making capability. There's no ecological
+response to repeated external stimuli.</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>The last
+major component of a full, integrated mob AI system would be to allow groups of
+mobs to change their behaviors over time. Creatures (as less intelligent mobs)
+would simply react to player incursions by migrating elsewhere from their
+hunting or feeding grounds. (Unless of course they happen to regard players as tasty
+snacks, in which case maybe breeding rates go up to take advantage of the
+unexpected bounty.)</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>NPC mob
+groups would have even more types of long-term behavioral choices available to
+them. Maybe when you wipe out an orc encampment several times, the orcs move
+somewhere else. Now they're someone else's problem (or opportunity.) But
+perhaps instead you've stumbled across a particularly warlike band of orcs, and
+they don't take kindly to your depredations. So they've dispatched a runner to
+invite some of their friends over to hide in the woods around their encampment.
+The next time you show up to casually mete out destruction, you discover that
+you're facing not five orcs, but fifty. Surprise!</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>Or
+suppose a group of NPCs realize that a lot of players have been asking them for
+a particular type of quest. What if the rewards for that quest become less
+valuable to reflect an increased supply in reaction to demand? Conversely, what
+if those NPCs decided to offer more quests like that one, since obviously it's
+very popular? Why shouldn’t NPCs be able to change their behaviors in response
+to the ways that players interact with them?</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>As a
+final example, what if an entire faction of NPCs decides that players have been
+beating up on them a little too much, and coordinates a massive assault (maybe
+physical, maybe economic) on some player resource or location? Isn't that
+exactly the kind of large-scale action many players say they'd love to see in a
+MMORPG?</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>An
+ecological AI capability could enable precisely that sort of event.</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>----</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>Agenda,
+environment, communication, and ecology. Design your mob AI to incorporate
+those capabilities, and you will have a gameworld that players will remember
+with pleasure for years to come.</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>--Flatfingers</span></p>
+
+</div>
+
+</body>
+
+</html>

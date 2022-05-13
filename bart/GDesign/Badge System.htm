@@ -1,0 +1,281 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=Generator content="Microsoft Word 11 (filtered)">
+<title>Badge System Concepts</title>
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Verdana;
+	panose-1:2 11 6 4 3 5 4 4 2 4;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0in;
+	margin-bottom:.0001pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+h2
+	{margin-right:0in;
+	margin-left:0in;
+	font-size:18.0pt;
+	font-family:"Times New Roman";
+	font-weight:bold;}
+h3
+	{margin-right:0in;
+	margin-left:0in;
+	font-size:13.5pt;
+	font-family:"Times New Roman";
+	font-weight:bold;}
+a:link, span.MsoHyperlink
+	{color:blue;
+	text-decoration:underline;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:blue;
+	text-decoration:underline;}
+p
+	{margin-right:0in;
+	margin-left:0in;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+@page Section1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.25in 1.0in 1.25in;}
+div.Section1
+	{page:Section1;}
+ /* List Definitions */
+ ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+-->
+</style>
+
+</head>
+
+<body lang=EN-US link=blue vlink=blue>
+
+<div class=Section1>
+
+<p class=MsoNormal><b><span style='font-family:Verdana'>Badge System Concepts</span></b></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>2004/07/29</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>One of
+the things a developer usually wants to do is allow players to show each other
+information about themselves. One of the ways this can be done, particularly in
+a game that promotes the collection of items or ranks, awards, or other status
+markers, is a &quot;badge&quot; system.</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><b><span style='font-size:10.0pt;font-family:Verdana'>I. THE
+FUNCTIONS OF BADGES</span></b></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>Before
+getting into suggestions about how to implement badges, it's useful to consider
+the functions they can serve in a MMOG.</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<ul style='margin-top:0in' type=disc>
+ <li class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>record
+     of achievement</span></li>
+</ul>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>Badges
+serve first and foremost to tell other players what you've accomplished. In one
+sense, this is just &quot;bragging rights,&quot; but there doesn't have to be
+anything juvenile about it. Accomplishing something difficult -- even if only
+in a game -- is worthy of being recognized publicly in that game. A badge
+system that does this well will be a popular game feature.</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<ul style='margin-top:0in' type=disc>
+ <li class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>indicator
+     of playstyle</span></li>
+</ul>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>Badges
+serve as a way for a player to concisely describe his or her playstyle. In an
+online game, your identify (that is, your character's identity) isn't
+communicated so much by what you look like as by what you do. Your actions tell
+people who you are.</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>Badges
+are a kind of shorthand for describing the actions you've taken, and more specifically
+the kind of actions you like to take. If you have more Location badges than
+anything else, other players can assume (probably correctly) that you're more
+interested in travelling than in combat or mastering professions. Similarly, if
+you have numerous badges for things like &quot;...has slain over 10,000
+animals&quot; and &quot;...has participated in the destruction of
+[whatever]&quot;, then it's probably safe to assume that this is someone who
+prefers combat to travel or profession-mastering, and so on.</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>So a badge
+system that offers a few specific categories of badges, each of which is
+clearly related to a unique playstyle, will be effective at letting other
+players know what you like to do in the game.</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<ul style='margin-top:0in' type=disc>
+ <li class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>mark of
+     common interests</span></li>
+</ul>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>Badges
+serve as markers that allow players to recognize each other as belonging to a
+particular group or having similar interests. In real life, gang colors are an
+example of this function of badges -- the MMOG version of this could be
+considered to be the visible title appended to your name when you join a player
+organization. Another example would be to see someone besides yourself wearing
+armor like yours -- this serves as a kind of recognition marker for people who
+like combat.</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>The badge
+system itself could also be used to perform this function -- what if we could
+search for nearby players who are actively displaying certain badges or badge
+types?</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<ul style='margin-top:0in' type=disc>
+ <li class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>conversation
+     starter</span></li>
+</ul>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>Badges
+serve to indicate not just similarities but also differences. If we see a player
+displaying a badge we've never seen before, or a badge in an area that
+interests us, we can use that information to interact with the other player
+where we might not have done so otherwise.</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><b><span style='font-size:10.0pt;font-family:Verdana'>II.
+WHO'S INTERESTED?</span></b></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>There's a
+sense in which collecting badges suggests one MMOG playing style in particular:
+the Explorer. This isn't someone who's just interested in visiting different
+places; an Explorer is someone who enjoys finding all the content a game has to
+offer.</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>Explorers
+don't just collect Location badges -- they also collect combat badges and
+profession mastery badges; they want to know how the game works; they want to
+understand why the game system behaves the way it does.</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>Some
+players want this knowledge specifically to gain power over other players, or
+for security from other players. These folks aren't Explorers, exactly; they do
+these things more as achievements. In fact, that's what the typical person who
+enjoys this accomplishment-oriented playstyle is called: the Achiever. There's
+nothing inherently wrong with being an Achiever -- you could even say that
+these are exactly the people that a badge system in a game is intended for.</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>But
+Explorers are worth encouraging in an online game, too. These are the people
+who not only know all the interesting features of a game, they understand why
+those features exist and how best to enjoy them. An Explorer can not only tell
+you where to find that critter you've been wanting to bag, but can also tell
+you the best tactics to use and even whether there are other creatures in the
+area that you might also be interested in.</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>It seems
+to me that this type of gameplay ought to have some badges geared toward it as
+well. Location badges are a good start, but how about some additional ways to
+indicate that a character has collected lots of knowledge about the game world?</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>(Note:
+For more on Achievers and Explorers, and on the other two major playstyles --
+Killers and Socializers -- read Richard Bartle's &quot;<a
+href="http://www.mud.co.uk/richard/hcds.htm">Players Who Suit MUDs</a>&quot;.
+Then find out what kind of playstyle you prefer by taking the Bartle test at
+Erwin Andreasen's &quot;<a href="http://www.andreasen.org/bartle/">Bartle
+Quotient</a>&quot; site.)</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><b><span style='font-size:10.0pt;font-family:Verdana'>III.
+&quot;PHYSICAL&quot; DISPLAY</span></b></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>Badges
+shouldn't just be bit of text that you have to /examine someone to see -- they
+ought to be &quot;physical&quot; objects in the game world that your character
+can actually see being worn by another character.</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>There are
+various ways this could be done. One obvious way already in the game is high-level
+armor, especially high-level factional armor. Another type of &quot;badge&quot;
+is someone being followed by a creature pet -- the creature acts as a kind of
+marker to tell other players that this person is probably a pet handler.</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>But why
+not make this type of badge official? Certain badges ought to be actual
+physical objects (in the game) that a player can choose to display. The most
+obvious form of this kind of badge is as something you wear outside your
+clothing -- medals, pins, rank sashes, and other decorations.</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>Or you
+could let the player choose one badge from those she's won to be displayed as a
+visual effect -- perhaps a glow, or an icon displayed above her head. This
+wouldn't have to be fancy; a simple icon would be enough (although fancy would
+be cool). And it could reuse the code recently added to allow some
+&quot;emoticons&quot; to be displayed above a character's head, so it shouldn't
+even be very technically challenging.</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Verdana'>So I say let's
+think about what badges are really good for... and then go to town thinking of
+ways to enhance the current badge system to achieve those goals!</span></p>
+
+</div>
+
+</body>
+
+</html>

@@ -1,0 +1,164 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=Generator content="Microsoft Word 11 (filtered)">
+<title>Bottom-up, Top-down, and Inside-out Game Design</title>
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Verdana;
+	panose-1:2 11 6 4 3 5 4 4 2 4;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0in;
+	margin-bottom:.0001pt;
+	punctuation-wrap:simple;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:"Times New Roman";}
+@page Section1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.25in 1.0in 1.25in;}
+div.Section1
+	{page:Section1;}
+-->
+</style>
+
+</head>
+
+<body lang=EN-US>
+
+<div class=Section1>
+
+<p class=MsoNormal><b><span style='font-size:12.0pt;font-family:Verdana'>Bottom-up,
+Top-down, and Inside-out Game Design</span></b></p>
+
+<p class=MsoNormal><span style='font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-family:Verdana'>2006/06/30</span></p>
+
+<p class=MsoNormal><span style='font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-family:Verdana'>I started programming back
+in the early 80s when "structured programming" was still going to
+save programmers from themselves. One of the components of this model was
+"top-down programming."</span></p>
+
+<p class=MsoNormal><span style='font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-family:Verdana'>Through experience I
+learned that neither top-down programming nor its bottom-up predecessor worked
+well for me. Both approaches missed important things. So I worked out my own
+approach to design, which I naively called "inside-out" design. Rather
+than starting either at the top or the bottom, I would start from the middle,
+seeing the whole system as a skeleton of core systems branching out into
+reusable subsystems.</span></p>
+
+<p class=MsoNormal><span style='font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-family:Verdana'>Another way of putting it
+is that I learned to "flatten" the map of systems. Looking at either
+the top or the bottom hid necessary information -- by exposing systems from the
+middle outward, I could see all the key system relationships at once. (A key
+here for me was encountering John Gall's remarkable book <A
+HREF="http://en.wikipedia.org/wiki/Systemantics">Systemantics</A>,
+which for its exploration of both theory and practice remains one of the most
+useful works on <A HREF="..\systems1.htm">systems design</A> I've ever read.)</span></p>
+
+<p class=MsoNormal><span style='font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-family:Verdana'>Later on I discovered that
+although I personally was more comfortable with this systems-oriented approach
+to design, there were some people who still preferred top-down design... but
+there were even more people for whom bottom-up is simply the only way they are
+capable of thinking.</span></p>
+
+<p class=MsoNormal><span style='font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-family:Verdana'>In the group of developers
+I manage, for example, there's one who regularly misses things because she
+"chunks" systems. Her code usually accomplishes what the customer
+really needs, and fits well with the rest of the system, and gets done in a
+timely fashion. But there's almost always some little piece that doesn't work,
+causing me to have to budget more time for testing her code than that of other
+developers.</span></p>
+
+<p class=MsoNormal><span style='font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-family:Verdana'>But then there's the other
+developer who is constitutionally incapable of thinking in any way other than
+details-first. He is superb at collecting requirements, and at insuring that no
+requirement is missed in implementation... but his stuff takes forever to
+write, it often duplicates existing subroutines, and it doesn't always
+integrate well with existing code. Worst of all, it sometimes has to be
+substantially rewritten later because it didn't question what the customer
+asked for versus what they actually needed. So I have to allocate time to
+providing high-level organization for this developer's work.</span></p>
+
+<p class=MsoNormal><span style='font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-family:Verdana'>No amount of direction or
+assistance from me has changed these behaviors. These are simply the ways their
+minds work, and the best I can do is find tasks for them that fit their styles.</span></p>
+
+<p class=MsoNormal><span style='font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-family:Verdana'>All of which is an
+excessively long preface to my agreeing enthusiastically with the observation
+in the <A HREF="http://terranova.blogs.com/terra_nova/2006/06/ofzaftdod.html">Situational
+Awareness</A> thread on <A HREF="http://terranova.blogs.com/terra_nova/">Terra Nova</A>
+that "[d]esired is a form that <b>reflects the priority of the player</b> (and
+implicitly the world/game design)." This fits precisely what I've come to
+believe about MMORPG design, which is that in too many cases it's not
+player-centric enough. Or, more accurately, that features and interfaces are designed
+for only one type of person, that being the detail-oriented kind of person. If
+you're not that kind of person, sorry, you don't get a game.</span></p>
+
+<p class=MsoNormal><span style='font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-family:Verdana'>Many people think in terms
+of concrete, external details. These folks want interfaces that let them interact
+directly and reliably with tangible elements of the game. They like the
+"radar"; they like having the numbers of the RPG exposed; they like
+seeing information about a potential target (either floating over its head or
+detailed in a pop-up window, or both). They like things that can be held,
+owned, possessed -- weapons, armor, tools, clothing, houses, furnishings,
+decorations -- and they want to be able to control the appearance, positioning,
+usage, and stats of all these things. Oh, and they want all of that Right Now.
+Like the jet fighter pilot, they value constant situational awareness. Clearly
+most MMORPGs are designed to satisfy people with this worldview.</span></p>
+
+<p class=MsoNormal><span style='font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-family:Verdana'>But not all gamers see the
+world that way. Some of them naturally have top-down minds. They prefer not to
+see the nuts-and-bolts details; to expose that information breaks the illusion
+of being in a coherent, dynamic world-story. These gamers prefer surprise over
+certainty; they enjoy realizing how systems fit within systems to create a
+coherent whole; they like stories-within-stories that unfold over time; they
+want "ecological" AI rather than farmable loot bags; they prefer
+reading layerable maps over following magic lines; and by a large margin they
+want tools to build their own objects and stories instead of just taking
+whatever they're given. (If it's hard to provide examples of top-down game
+features and interfaces, that's because few MMORPGs offer those kinds of
+things!)</span></p>
+
+<p class=MsoNormal><span style='font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-family:Verdana'>So where are the virtual
+worlds that consider both of these ways of looking at the (game)world to be
+valid? What MMORPGs support both top-down and bottom-up thinking in the design
+of both gameplay features and user interfaces?</span></p>
+
+<p class=MsoNormal><span style='font-family:Verdana'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-family:Verdana'>Is such a thing even
+possible?</span></p>
+
+</div>
+
+</body>
+
+</html>
