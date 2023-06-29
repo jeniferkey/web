@@ -1,0 +1,449 @@
+<html>
+
+<head>
+  <title>File Not Found</title>
+  <meta http-equiv="Refresh" content="60; url=/">
+  <link rel="stylesheet" href="/inc/style.css" type="text/css">
+</head>
+
+<body>
+
+<center>
+
+<table width=738 cellpadding=5 cellspacing=0 border=0>
+
+<!-- top -->
+
+  <tr>
+    <td width=120 bgcolor="#ffcc66" align="center" valign="top" class="header">
+    COMMUNITY<br>CONTENT
+    <p>
+      <!-- ? include("$pre/inc/shops-left.php"); ? --></td>
+    <td bgcolor="#ffffff" align="center" class="other">
+      <img src="/images/title.gif" width=400 height=80 alt="Crosswinds">
+
+    <p>
+      
+    <table width="100%" cellpadding=0 cellspacing=0 border=0>
+        <tr>
+          <td width=100 align="center" bgcolor="#ffffff" class="small">
+            <a href="http://cwmail.crosswinds.net/"><img src="/images/check-mail.gif" width=43 height=37 border=0 alt="Check Mail"></a><br>
+            <a href="http://cwmail.crosswinds.net/">Check Mail</a></td>
+          <td align="center" bgcolor="#ffffff" class="other">
+             <font color="#003366"><b>The Next Net Community</b></font></td>
+          <td width=100 align="center" bgcolor="#ffffff" class="small">
+            <a href="/members/homepage_util.php"><img src="/images/member-utilities.gif" width=43 height=37 border=0 alt="Member Utilities"></a><br>
+            <a href="/members/homepage_util.php">Member Utilities</a></td>
+        </tr>
+      </table>
+
+      <p>
+    
+          <!--Begin Flycast Ad Copyright 1999 Flycast Communications.
+        All rights reserved. Patent Pending -->
+        <SCRIPT LANGUAGE="JAVASCRIPT">
+        <!--
+        FlycastSite = "CrosswindsnetTheNextNetCommunity";
+        FlycastPage = "MainPage";
+        FlycastWidth        = 468;
+        FlycastHeight       = 60;
+        FlycastPrintTag     = true;
+        FlycastNewAd        = true;
+        FlycastEnableTargetWindow   = false;
+        FlycastKeyword      = "";
+        FlycastLoaded       = false;
+        FlycastVersion      = 3.6;
+        //-->
+        </SCRIPT>
+        <SCRIPT SRC="http://js-adex3.flycast.com/FlycastUniversal/Version3.6/" LANGUAGE="JAVASCRIPT"></SCRIPT>
+        <SCRIPT LANGUAGE="JAVASCRIPT">
+        <!--
+            if (!FlycastLoaded) document.write('<A target="_top" HREF="http://ad-adex3.flycast.com/server/click/CrosswindsnetTheNextNetCommunity/MainPage/123"><IM' + 'G WIDTH=468 HEIGHT=60 BORDER=0 SRC="http://ad-adex3.flycast.com/server/ad/CrosswindsnetTheNextNetCommunity/MainPage/123"></A>');
+        //-->
+        </SCRIPT>
+        <NOSCRIPT>
+            <IFRAME SRC="http://ad-adex3.flycast.com/server/iframe/CrosswindsnetTheNextNetCommunity/MainPage/123" scrolling="no" marginwidth=0 marginheight=0 frameborder=0 vspace=0 hspace=0 WIDTH=468 HEIGHT=60>
+            <A target="_top" HREF="http://ad-adex3.flycast.com/server/click/CrosswindsnetTheNextNetCommunity/MainPage/123"><IMG BORDER=0 WIDTH=468 HEIGHT=60 SRC="http://ad-adex3.flycast.com/server/img/CrosswindsnetTheNextNetCommunity/MainPage/123"></A>
+            </IFRAME>
+        </NOSCRIPT>
+    <!--End Flycast Ad Copyright 1999 Flycast Communications. All rights reserved. Patent Pending -->
+    </td>
+    <td width=120 bgcolor="#ffcc66" align="center" valign="top" class="header">
+    COMMUNITY<br>NET EXTRAS
+    <p>
+      <!-- ? include("$pre/inc/shops-right.php"); ? --></td>
+  </tr>
+</table>
+
+<!-- divider -->
+
+<table width=738 cellpadding=0 cellspacing=0 border=0>
+
+  <tr bgcolor="#ffcc66">
+    <td width=140><img src="/images/left.gif" width=140 height=40 alt=""></td>
+    <td width=458><img src="/images/middle.gif" width=458 height=40 alt=""></td>
+    <td width=140><img src="/images/right.gif" width=140 height=40 alt=""></td>
+  </tr>
+
+</table>
+
+<table width=738 cellpadding=5 cellspacing=0 border=0>
+
+  <tr>
+    <td width=120 bgcolor="#ffcc66" valign="top">
+      <table width=120 cellpadding=0 cellspacing=0 border=0>
+        <tr>
+          <td align="right" class="header2">Main Menu</td>
+          <td><img src="/images/spacer.gif" width=20 height=30 alt=""></td>
+        </tr>
+        <tr>
+          <td align="right" class="medium"><a href="/">Home</a></td>
+          <td><img src="/images/202.gif"></td>
+        </tr> 
+        <tr>
+          <td align="right" class="medium"><a href="/about_us/">About Us</a></td>
+          <td><img src="/images/204.gif"></td>
+        </tr> 
+        <tr>
+          <td align="right" class="medium"><a href="/services/">Services</a></td>
+          <td><img src="/images/204.gif"></td>
+        </tr> 
+        <tr>
+          <td align="right" class="medium"><a href="/sign_up/">Join Us</a></td>
+          <td><img src="/images/204.gif"></td>
+        </tr> 
+        <tr>
+          <td align="right" class="medium"><a href="/members/">Members</a></td>
+          <td><img src="/images/204.gif"></td>
+        </tr> 
+        <tr>
+          <td align="right" class="medium"><a href="http://cwmail.crosswinds.net">Mail Center</a></td>
+          <td><img src="/images/204.gif"></td>
+        </tr> 
+        <tr>
+          <td align="right" class="medium"><a href="/help/">Help Area</a></td>
+          <td><img src="/images/204.gif"></td>
+        </tr> 
+        <tr>
+          <td align="right" class="medium"><a href="/search/">Search Area</a></td>
+          <td><img src="/images/206.gif"></td>
+        </tr> 
+      </table>
+
+      <p class="other">
+      <b>Featured Links</b>
+      <center>
+      <p class="main">
+      <b><a href="/games/">Online Games!</a></b>
+      <p class="main">
+      <b><a href="http://www.crosswinds.net/~littlecajun/">Cajun!</a></b>
+      </center>
+      <p class="medium">
+      </td>
+    <td width=468 bgcolor="#ffffff" valign="top" class="main">
+
+      <!-- begin main page contents -->
+
+      <p>
+
+      <!-- Our apologies! 
+
+      During the data copy from the old server to the new RAID, some pages were 
+      lost. We did all we could to restore them, but unfortunately, were unsuccessful. 
+
+      We have increased availability to http upload and FTP. If your site was 
+      affected, please re-upload at your convenience.
+
+      Again, we apologize for the inconvenience this has caused you.
+
+      -->
+
+      Looks like the page you were looking for was not found on the Crosswinds 
+      server. If you typed in the URL manually, please <b>double check the URL</b> 
+      to make sure that you typed it correctly.
+
+      <p>
+
+            <p>
+      Enter the webpage address again to get the desired page.<BR>
+      <form action="http://home.crosswinds.net/redir.php" method="POST">
+        <input type="text" name="url" size=40 maxlength=256 value="http://www.crosswinds.net/~lonestarhitch/thehorses/rex.jpg"> 
+        <input type="submit" value="Go"> 
+      </form>       <p>
+      <b>Search Using <i>Crosswinds</i> Power Web Search</b>
+      <p>
+            <div align="left">
+      <form action="/notfound.php" method="post">
+        Search for <input type="text" name="QUERY" value="" size="30" maxlength="256"><input type="submit" value="Go!">
+      </form>      </div>
+      <p>
+      You can also use our <b>Member's Directory Search </b>to find the member's page you were looking for through our web page categories. 
+      <form action="http://home.crosswinds.net/cgi/link/linkmat.cgi" method="POST">
+      <input type=hidden name=script value="GeneralInterest">
+      
+      <table width="100%" cellpadding=0 cellspacing=0 border=0 class="small">
+      
+      <tr valign="top">
+        <td width="33%"><a href="http://home.crosswinds.net/cgi/link/linkmat.cgi?script=GeneralInterest&browse=1&category=10">Anime</a></td>
+        <td width="33%"><a href="http://home.crosswinds.net/cgi/link/linkmat.cgi?script=GeneralInterest&browse=1&category=11">Art</a></td>
+        <td width="33%"><a href="http://home.crosswinds.net/cgi/link/linkmat.cgi?script=GeneralInterest&browse=1&category=12">Automotive</a></td>
+      </tr>
+      
+      <tr valign="top">
+        <td><a href="http://home.crosswinds.net/cgi/link/linkmat.cgi?script=GeneralInterest&browse=1&category=13">Business</a></td>
+        <td><a href="http://home.crosswinds.net/cgi/link/linkmat.cgi?script=GeneralInterest&browse=1&category=14">Celebrities</a></td>
+        <td><a href="http://home.crosswinds.net/cgi/link/linkmat.cgi?script=GeneralInterest&browse=1&category=15">Children</a></td>
+      </tr>
+      
+      <tr valign="top">
+        <td><a href="http://home.crosswinds.net/cgi/link/linkmat.cgi?script=GeneralInterest&browse=1&category=16">Computers</a></td>
+        <td><a href="http://home.crosswinds.net/cgi/link/linkmat.cgi?script=GeneralInterest&browse=1&category=17">Cooking</a></td>
+        <td><a href="http://home.crosswinds.net/cgi/link/linkmat.cgi?script=GeneralInterest&browse=1&category=18">Culture</a></td>
+      </tr>
+      
+      <tr valign="top">
+        <td><a href="http://home.crosswinds.net/cgi/link/linkmat.cgi?script=GeneralInterest&browse=1&category=19">Education</a></td>
+        <td><a href="http://home.crosswinds.net/cgi/link/linkmat.cgi?script=GeneralInterest&browse=1&category=20">Entertainment</a></td>
+        <td><a href="http://home.crosswinds.net/cgi/link/linkmat.cgi?script=GeneralInterest&browse=1&category=21">Environment</a></td>
+      </tr>
+      
+      <tr valign="top">
+        <td><a href="http://home.crosswinds.net/cgi/link/linkmat.cgi?script=GeneralInterest&browse=1&category=22">Family</a></td>
+        <td><a href="http://home.crosswinds.net/cgi/link/linkmat.cgi?script=GeneralInterest&browse=1&category=23">Fantasy</a></td>
+        <td><a href="http://home.crosswinds.net/cgi/link/linkmat.cgi?script=GeneralInterest&browse=1&category=24">Fashion</a></td>
+      </tr>
+      
+      <tr valign="top">
+        <td><a href="http://home.crosswinds.net/cgi/link/linkmat.cgi?script=GeneralInterest&browse=1&category=25">Fitness</a></td>
+        <td><a href="http://home.crosswinds.net/cgi/link/linkmat.cgi?script=GeneralInterest&browse=1&category=26">Food</a></td>
+        <td><a href="http://home.crosswinds.net/cgi/link/linkmat.cgi?script=GeneralInterest&browse=1&category=27">Games</a></td>
+      </tr>
+      
+      <tr valign="top">
+        <td><a href="http://home.crosswinds.net/cgi/link/linkmat.cgi?script=GeneralInterest&browse=1&category=28">Genealogy</a></td>
+        <td><a href="http://home.crosswinds.net/cgi/link/linkmat.cgi?script=GeneralInterest&browse=1&category=29">General Interest</a></td>
+        <td><a href="http://home.crosswinds.net/cgi/link/linkmat.cgi?script=GeneralInterest&browse=1&category=30">Graphics</a></td>
+      </tr>
+      
+      <tr valign="top">
+        <td><a href="http://home.crosswinds.net/cgi/link/linkmat.cgi?script=GeneralInterest&browse=1&category=31">Hobbies</a></td>
+        <td><a href="http://home.crosswinds.net/cgi/link/linkmat.cgi?script=GeneralInterest&browse=1&category=32">Humor</a></td>
+        <td><a href="http://home.crosswinds.net/cgi/link/linkmat.cgi?script=GeneralInterest&browse=1&category=33">Internet</a></td>
+      </tr>
+      
+      <tr valign="top">
+        <td><a href="http://home.crosswinds.net/cgi/link/linkmat.cgi?script=GeneralInterest&browse=1&category=34">Life Styles</a></td>
+        <td><a href="http://home.crosswinds.net/cgi/link/linkmat.cgi?script=GeneralInterest&browse=1&category=35">Literature</a></td>
+        <td><a href="http://home.crosswinds.net/cgi/link/linkmat.cgi?script=GeneralInterest&browse=1&category=36">Local Interest</a></td>
+      </tr>
+      
+      <tr valign="top">
+        <td><a href="http://home.crosswinds.net/cgi/link/linkmat.cgi?script=GeneralInterest&browse=1&category=37">Military</a></td>
+        <td><a href="http://home.crosswinds.net/cgi/link/linkmat.cgi?script=GeneralInterest&browse=1&category=38">Movies</a></td>
+        <td><a href="http://home.crosswinds.net/cgi/link/linkmat.cgi?script=GeneralInterest&browse=1&category=39">Music</a></td>
+      </tr>
+      
+      <tr valign="top">
+        <td><a href="http://home.crosswinds.net/cgi/link/linkmat.cgi?script=GeneralInterest&browse=1&category=40">Nature</a></td>
+        <td><a href="http://home.crosswinds.net/cgi/link/linkmat.cgi?script=GeneralInterest&browse=1&category=41">Outdoors</a></td>
+        <td><a href="http://home.crosswinds.net/cgi/link/linkmat.cgi?script=GeneralInterest&browse=1&category=42">Pets</a></td>
+      </tr>
+      
+      <tr valign="top">
+        <td><a href="http://home.crosswinds.net/cgi/link/linkmat.cgi?script=GeneralInterest&browse=1&category=43">Photography</a></td>
+        <td><a href="http://home.crosswinds.net/cgi/link/linkmat.cgi?script=GeneralInterest&browse=1&category=44">Poetry</a></td>
+        <td><a href="http://home.crosswinds.net/cgi/link/linkmat.cgi?script=GeneralInterest&browse=1&category=45">Politics</a></td>
+      </tr>
+      
+      <tr valign="top">
+        <td><a href="http://home.crosswinds.net/cgi/link/linkmat.cgi?script=GeneralInterest&browse=1&category=46">Programming</a></td>
+        <td><a href="http://home.crosswinds.net/cgi/link/linkmat.cgi?script=GeneralInterest&browse=1&category=47">Recreation</a></td>
+        <td><a href="http://home.crosswinds.net/cgi/link/linkmat.cgi?script=GeneralInterest&browse=1&category=48">Religion</a></td>
+      </tr>
+      
+      <tr valign="top">
+        <td><a href="http://home.crosswinds.net/cgi/link/linkmat.cgi?script=GeneralInterest&browse=1&category=49">Science</a></td>
+        <td><a href="http://home.crosswinds.net/cgi/link/linkmat.cgi?script=GeneralInterest&browse=1&category=50">Science Fiction</a></td>
+        <td><a href="http://home.crosswinds.net/cgi/link/linkmat.cgi?script=GeneralInterest&browse=1&category=51">Sounds</a></td>
+      </tr>
+      
+      <tr valign="top">
+        <td><a href="http://home.crosswinds.net/cgi/link/linkmat.cgi?script=GeneralInterest&browse=1&category=52">Sports</a></td>
+        <td><a href="http://home.crosswinds.net/cgi/link/linkmat.cgi?script=GeneralInterest&browse=1&category=53">Teens</a></td>
+        <td><a href="http://home.crosswinds.net/cgi/link/linkmat.cgi?script=GeneralInterest&browse=1&category=54">Television</a></td>
+      </tr>
+      
+      <tr valign="top">
+        <td><a href="http://home.crosswinds.net/cgi/link/linkmat.cgi?script=GeneralInterest&browse=1&category=55">Travel</a></td>
+        <td><a href="http://home.crosswinds.net/cgi/link/linkmat.cgi?script=GeneralInterest&browse=1&category=56">Tutorials</a></td>
+        <td><a href="http://home.crosswinds.net/cgi/link/linkmat.cgi?script=GeneralInterest&browse=1&category=57">Women</a></td>
+      </tr>
+      
+      <tr valign="top">
+        <td><a href="http://home.crosswinds.net/cgi/link/linkmat.cgi?script=GeneralInterest&browse=1&category=58">Webmaster Resources</a></td>
+        <td><a href="http://home.crosswinds.net/cgi/link/linkmat.cgi?script=GeneralInterest&browse=1&category=59">Real Estate</a></td>
+        <td>&nbsp;</td>
+      </tr>
+      
+      
+      </table>
+      
+      </form>
+<center><b>If you are looking for 'Free Unlimited Web Space & E-mail Hosting'. <P>
+<A HREF="/sign_up/">Join Crosswinds!</a></b></center>
+      <!-- end main page contents -->
+
+<P>
+<A HREF="http://www.windsofteng.com/download/CWAmnesiaSetup20.exe"><IMG SRC="http://home.crosswinds.net/images/amnesia.gif" width=468 height=60 border=0></A>
+<P>
+    </td>
+    <td width=120 bgcolor="#ffcc66" align="center" valign="top">
+      <table width=120 cellpadding=0 cellspacing=0 border=0>
+        <tr>
+          <td width=20><img src="/images/spacer.gif" width=20 height=30 alt=""></td>
+          <td class="header2">Useful Links</td>
+        </tr>
+        <tr>
+          <td width=20><img src="/images/202.gif"></td>
+          <td class="medium"><a href="/sign_up/terms.php">Guidelines</a></td>
+        </tr> 
+        <tr>
+          <td width=20><img src="/images/204.gif"></td>
+          <td class="medium"><a href="/updates/">Updates</a></td>
+        </tr> 
+        <tr>
+          <td width=20><img src="/images/204.gif"></td>
+          <td class="medium"><a href="/directory/">Directory</a></td>
+        </tr> 
+        <tr>
+          <td width=20><img src="/images/204.gif"></td>
+          <td class="medium"><a href="/irc/">Chat With Us</a></td>
+        </tr> 
+        <tr>
+          <td width=20><img src="/images/204.gif"></td>
+          <td class="medium"><a href="/spam/">Fight Spam</a></td>
+        </tr> 
+        <tr>
+          <td width=20><img src="/images/204.gif"></td>
+          <td class="medium"><a href="/contact.php">Contact Us</a></td>
+        </tr> 
+        <tr>
+          <td width=20><img src="/images/204.gif"></td>
+          <td class="medium"><a href="/misc/legal_03.php">Privacy Policy</a></td>
+        </tr> 
+        <tr>
+          <td width=20><img src="/images/206.gif"></td>
+          <td class="medium"><a href="/misc/site_map.php">Site Map</a></td>
+        </tr> 
+      </table>
+
+      <p align="left">
+
+      <b class="other">Quick Survey</b>
+
+      <form method="post" action="/cgi/viewtest.cgi">
+
+      <input type="hidden" name=action value="VOTE">
+      <input type="hidden" name="filebase" value="demo2">
+
+      <table cellpadding=0 cellspacing=0 border=0>
+
+        <tr>
+          <td class="medium"><!-- Question -->
+Who is going to win the Super Bowl?
+<BR><br></td>
+        </tr>
+
+        <tr>
+          <td class="small">
+            <input type="radio" name="ITEM1" value="0"><!-- Answer 1 -->NY Giants
+</td>
+        </tr>
+
+        <tr>
+          <td class="small">
+            <input type="radio" name="ITEM1" value="1"><!-- Answer 2 -->Baltimore Ravens
+</td>
+        </tr>
+
+        <tr>
+          <td class="small">
+            <input type="radio" name="ITEM1" value="2"><!-- Answer 3 -->I don't know
+
+</td>
+        </tr>
+
+
+      </table>
+
+      <p>
+
+      <input type="submit" value="Vote"></form>
+      <form method="post" action="/cgi/viewtest.cgi">
+        <input type="hidden" name=action value="VIEW">
+        <input type="hidden" name=ITEM1 value="VIEW">
+        <input type="hidden" name="filebase" value="demo2">
+        <input type="submit" value="Results">
+      </form>
+    </td>
+  </tr>
+</table>
+
+<!-- divider -->
+
+<table width=738 cellpadding=0 cellspacing=0 border=0>
+
+  <tr bgcolor="#ffcc66">
+    <td width=140><img src="/images/left.gif" width=140 height=40 alt=""></td>
+    <td width=458><img src="/images/middle.gif" width=458 height=40 alt=""></td>
+    <td width=140><img src="/images/right.gif" width=140 height=40 alt=""></td>
+  </tr>
+
+</table>
+
+<!-- footer -->
+
+<table width=738 cellpadding=5 cellspacing=0 border=0>
+
+  <tr>
+    <td bgcolor="#ffcc66" width=120>&nbsp;</td>
+    <td bgcolor="#ffffff" width=468 align="center" valign="bottom">
+      <table cellpadding=0 cellspacing=0 border=0>
+        <tr>
+          <td bgcolor="#ffffff" width=258 align="center" class="other">
+            <font color="#cc6600"><b>CROSSWINDS' SITE OF THE WEEK</b></font>
+            <p class="medium">
+            <!-- Compliments of To Be Announced -->
+            <p class="other">
+            <b><a href="http://www.crosswinds.net/~viriatha/">The Coffee Shoppe at the End of Alfandria</a>
+<br>
+<small>January 8, 2001</small></b>
+            <br>
+            <img src="/images/spacer.gif" width=238 height=1 alt="">
+            <br>
+          </td>
+        </tr>
+      </table>
+    </td>
+    <td bgcolor="#ffcc66" width=120>&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td bgcolor="#ffcc66" width=120 valign="bottom">
+      <a href="http://www.freebsd.org/"><img src="/images/bsd.gif" width=120 height=45 border=0 alt="Powerd by FreeBSD"></a></td>
+    <td width=468 bgcolor="#ffffff" align="center" class="small">
+    <form action="/inc/ah-ha-search.php" method="post">
+        Search for <input type="text" name="QUERY" value="" size="30" maxlength="256"><input type="submit" value="Go!">
+      </form>
+      <a href="/misc/legal.php">Copyright</A> 2000 Crosswinds Internet Communications Inc. All rights reserved.</td>
+    <td bgcolor="#ffcc66" width=120>
+      <img src="/images/spacer.gif" width=120 height=1 alt=""></td>
+  </tr>
+
+</table>
+
+</center>
+
+</body>
+
+</html>
